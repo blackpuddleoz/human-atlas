@@ -1,0 +1,848 @@
+{
+  "scapula": {
+    "ko": "견갑골",
+    "aliases": [
+      "어깨뼈"
+    ],
+    "summary": "어깨 복합체를 구성하는 편평뼈로 흉곽 위에서 미끄러지며 상방·하방회전, 전인·후인 등에 참여합니다."
+  },
+  "humerus": {
+    "ko": "상완골",
+    "aliases": [
+      "위팔뼈"
+    ],
+    "summary": "어깨관절과 팔꿈치관절을 이루는 위팔의 긴뼈입니다."
+  },
+  "clavicle": {
+    "ko": "쇄골",
+    "aliases": [
+      "빗장뼈"
+    ],
+    "summary": "흉골과 견갑골을 연결하고 어깨 복합체의 위치와 움직임을 돕는 뼈입니다."
+  },
+  "vertebra": {
+    "ko": "척추뼈",
+    "aliases": [
+      "척추골"
+    ]
+  },
+  "vertebral column": {
+    "ko": "척주",
+    "aliases": [
+      "척추",
+      "척추기둥"
+    ],
+    "summary": "척추뼈와 추간판으로 이루어진 기둥으로 몸통 지지, 척수 보호, 분절 움직임에 참여합니다."
+  },
+  "cervical vertebra": {
+    "ko": "경추",
+    "aliases": [
+      "목뼈"
+    ]
+  },
+  "thoracic vertebra": {
+    "ko": "흉추",
+    "aliases": [
+      "등뼈"
+    ],
+    "summary": "늑골과 관절을 이루는 흉추의 척추뼈로, 흉곽과 함께 몸통 움직임을 형성합니다."
+  },
+  "lumbar vertebra": {
+    "ko": "요추",
+    "aliases": [
+      "허리뼈"
+    ]
+  },
+  "cervical vertebral column": {
+    "ko": "경추부 척주",
+    "aliases": [
+      "목척추"
+    ]
+  },
+  "thoracic vertebral column": {
+    "ko": "흉추부 척주",
+    "aliases": [
+      "등척추"
+    ]
+  },
+  "lumbar vertebral column": {
+    "ko": "요추부 척주",
+    "aliases": [
+      "허리척추"
+    ]
+  },
+  "intervertebral disk": {
+    "ko": "추간판",
+    "aliases": [
+      "척추사이원반"
+    ]
+  },
+  "sacrum": {
+    "ko": "천골",
+    "aliases": [
+      "엉치뼈"
+    ]
+  },
+  "bony pelvis": {
+    "ko": "골반뼈",
+    "aliases": [
+      "뼈골반"
+    ]
+  },
+  "pelvic girdle": {
+    "ko": "골반대",
+    "aliases": [
+      "하지대"
+    ]
+  },
+  "hip bone": {
+    "ko": "관골",
+    "aliases": [
+      "볼기뼈"
+    ]
+  },
+  "femur": {
+    "ko": "대퇴골",
+    "aliases": [
+      "넙다리뼈"
+    ]
+  },
+  "tibia": {
+    "ko": "경골",
+    "aliases": [
+      "정강뼈"
+    ]
+  },
+  "fibula": {
+    "ko": "비골",
+    "aliases": [
+      "종아리뼈"
+    ]
+  },
+  "patella": {
+    "ko": "슬개골",
+    "aliases": [
+      "무릎뼈"
+    ]
+  },
+  "radius": {
+    "ko": "요골",
+    "aliases": [
+      "노뼈"
+    ]
+  },
+  "ulna": {
+    "ko": "척골",
+    "aliases": [
+      "자뼈"
+    ]
+  },
+  "sternum": {
+    "ko": "흉골",
+    "aliases": [
+      "복장뼈"
+    ]
+  },
+  "manubrium": {
+    "ko": "흉골병",
+    "aliases": [
+      "복장뼈자루"
+    ]
+  },
+  "xiphoid process": {
+    "ko": "검상돌기",
+    "aliases": [
+      "칼돌기"
+    ]
+  },
+  "rib": {
+    "ko": "늑골",
+    "aliases": [
+      "갈비뼈"
+    ]
+  },
+  "rib cage": {
+    "ko": "흉곽",
+    "aliases": [
+      "가슴우리"
+    ]
+  },
+  "costal cartilage": {
+    "ko": "늑연골",
+    "aliases": [
+      "갈비연골"
+    ]
+  },
+  "skull": {
+    "ko": "두개골",
+    "aliases": [
+      "머리뼈"
+    ]
+  },
+  "frontal bone": {
+    "ko": "전두골",
+    "aliases": [
+      "이마뼈"
+    ]
+  },
+  "parietal bone": {
+    "ko": "두정골",
+    "aliases": [
+      "마루뼈"
+    ]
+  },
+  "occipital bone": {
+    "ko": "후두골",
+    "aliases": [
+      "뒤통수뼈"
+    ]
+  },
+  "temporal bone": {
+    "ko": "측두골",
+    "aliases": [
+      "관자뼈"
+    ]
+  },
+  "mandible": {
+    "ko": "하악골",
+    "aliases": [
+      "아래턱뼈"
+    ]
+  },
+  "maxilla": {
+    "ko": "상악골",
+    "aliases": [
+      "위턱뼈"
+    ]
+  },
+  "scaphoid": {
+    "ko": "주상골(손목)",
+    "aliases": [
+      "손배뼈"
+    ]
+  },
+  "lunate": {
+    "ko": "월상골",
+    "aliases": [
+      "반달뼈"
+    ]
+  },
+  "pisiform": {
+    "ko": "두상골",
+    "aliases": [
+      "콩알뼈"
+    ]
+  },
+  "triquetral": {
+    "ko": "삼각골",
+    "aliases": [
+      "세모뼈"
+    ]
+  },
+  "trapezium": {
+    "ko": "대능형골",
+    "aliases": [
+      "큰마름뼈"
+    ]
+  },
+  "trapezoid": {
+    "ko": "소능형골",
+    "aliases": [
+      "작은마름뼈"
+    ]
+  },
+  "capitate": {
+    "ko": "유두골",
+    "aliases": [
+      "알머리뼈"
+    ]
+  },
+  "hamate": {
+    "ko": "유구골",
+    "aliases": [
+      "갈고리뼈"
+    ]
+  },
+  "talus": {
+    "ko": "거골",
+    "aliases": [
+      "목말뼈"
+    ]
+  },
+  "calcaneus": {
+    "ko": "종골",
+    "aliases": [
+      "발꿈치뼈"
+    ]
+  },
+  "navicular bone of foot": {
+    "ko": "주상골(발)",
+    "aliases": [
+      "발배뼈"
+    ]
+  },
+  "cuboid bone": {
+    "ko": "입방골",
+    "aliases": [
+      "입방뼈"
+    ]
+  },
+  "first metatarsal bone": {
+    "ko": "제1중족골",
+    "aliases": [
+      "첫째발허리뼈"
+    ]
+  },
+  "atlas": {
+    "ko": "환추",
+    "aliases": [
+      "제1경추",
+      "고리뼈"
+    ]
+  },
+  "axis": {
+    "ko": "축추",
+    "aliases": [
+      "제2경추",
+      "중쇠뼈"
+    ]
+  },
+  "supraspinatus": {
+    "ko": "극상근",
+    "aliases": [
+      "가시위근"
+    ]
+  },
+  "infraspinatus": {
+    "ko": "극하근",
+    "aliases": [
+      "가시아래근"
+    ]
+  },
+  "subscapularis": {
+    "ko": "견갑하근",
+    "aliases": [
+      "어깨밑근"
+    ]
+  },
+  "teres minor": {
+    "ko": "소원근",
+    "aliases": [
+      "작은원근"
+    ]
+  },
+  "teres major": {
+    "ko": "대원근",
+    "aliases": [
+      "큰원근"
+    ]
+  },
+  "levator scapulae": {
+    "ko": "견갑거근",
+    "aliases": [
+      "어깨올림근"
+    ]
+  },
+  "rhomboid major": {
+    "ko": "대능형근",
+    "aliases": [
+      "큰마름근"
+    ]
+  },
+  "rhomboid minor": {
+    "ko": "소능형근",
+    "aliases": [
+      "작은마름근"
+    ]
+  },
+  "zone of trapezius": {
+    "ko": "승모근",
+    "aliases": [
+      "등세모근",
+      "trapezius"
+    ]
+  },
+  "ascending part of trapezius": {
+    "ko": "하부 승모근",
+    "aliases": [
+      "승모근 하부"
+    ]
+  },
+  "transverse part of trapezius": {
+    "ko": "중부 승모근",
+    "aliases": [
+      "승모근 중부"
+    ]
+  },
+  "descending part of trapezius": {
+    "ko": "상부 승모근",
+    "aliases": [
+      "승모근 상부"
+    ]
+  },
+  "zone of deltoid": {
+    "ko": "삼각근",
+    "aliases": [
+      "어깨세모근",
+      "deltoid"
+    ],
+    "summary": "삼각근은 앞·중간·뒤 부분으로 나뉘며 어깨관절의 벌림, 굴곡, 신전 등 여러 움직임에 관여합니다."
+  },
+  "clavicular part of deltoid": {
+    "ko": "삼각근 전부",
+    "aliases": [
+      "삼각근 쇄골부",
+      "전면 삼각근"
+    ]
+  },
+  "acromial part of deltoid": {
+    "ko": "삼각근 중부",
+    "aliases": [
+      "삼각근 견봉부",
+      "측면 삼각근"
+    ]
+  },
+  "spinal part of deltoid": {
+    "ko": "삼각근 후부",
+    "aliases": [
+      "삼각근 견갑극부",
+      "후면 삼각근"
+    ]
+  },
+  "zone of pectoralis major": {
+    "ko": "대흉근",
+    "aliases": [
+      "큰가슴근",
+      "pectoralis major"
+    ]
+  },
+  "clavicular part of pectoralis major": {
+    "ko": "대흉근 쇄골부",
+    "aliases": [
+      "큰가슴근 빗장부분"
+    ]
+  },
+  "sternocostal part of pectoralis major": {
+    "ko": "대흉근 흉늑부",
+    "aliases": [
+      "큰가슴근 복장갈비부분"
+    ]
+  },
+  "abdominal part of pectoralis major": {
+    "ko": "대흉근 복부",
+    "aliases": [
+      "큰가슴근 배부분"
+    ]
+  },
+  "pectoralis minor": {
+    "ko": "소흉근",
+    "aliases": [
+      "작은가슴근"
+    ]
+  },
+  "serratus anterior": {
+    "ko": "전거근",
+    "aliases": [
+      "앞톱니근"
+    ],
+    "summary": "전거근은 견갑골의 전인과 상방회전, 흉곽 밀착에 기여합니다."
+  },
+  "serratus posterior superior": {
+    "ko": "상후거근",
+    "aliases": [
+      "위뒤톱니근"
+    ]
+  },
+  "serratus posterior inferior": {
+    "ko": "하후거근",
+    "aliases": [
+      "아래뒤톱니근"
+    ]
+  },
+  "sternocleidomastoid": {
+    "ko": "흉쇄유돌근",
+    "aliases": [
+      "목빗근"
+    ]
+  },
+  "scalenus anterior": {
+    "ko": "전사각근",
+    "aliases": [
+      "앞목갈비근"
+    ]
+  },
+  "scalenus medius": {
+    "ko": "중사각근",
+    "aliases": [
+      "중간목갈비근"
+    ]
+  },
+  "scalenus posterior": {
+    "ko": "후사각근",
+    "aliases": [
+      "뒤목갈비근"
+    ]
+  },
+  "splenius capitis": {
+    "ko": "두판상근",
+    "aliases": [
+      "머리널판근"
+    ]
+  },
+  "splenius cervicis": {
+    "ko": "경판상근",
+    "aliases": [
+      "목널판근"
+    ]
+  },
+  "iliocostalis lumborum": {
+    "ko": "요장늑근",
+    "aliases": [
+      "허리엉덩갈비근"
+    ]
+  },
+  "iliocostalis thoracis": {
+    "ko": "흉장늑근",
+    "aliases": [
+      "등엉덩갈비근"
+    ]
+  },
+  "longissimus thoracis": {
+    "ko": "흉최장근",
+    "aliases": [
+      "등가장긴근"
+    ]
+  },
+  "longissimus cervicis": {
+    "ko": "경최장근",
+    "aliases": [
+      "목가장긴근"
+    ]
+  },
+  "spinalis thoracis": {
+    "ko": "흉극근",
+    "aliases": [
+      "등가시근"
+    ]
+  },
+  "semispinalis thoracis": {
+    "ko": "흉반극근",
+    "aliases": [
+      "등반가시근"
+    ]
+  },
+  "semispinalis capitis": {
+    "ko": "두반극근",
+    "aliases": [
+      "머리반가시근"
+    ]
+  },
+  "external intercostal muscle": {
+    "ko": "외늑간근",
+    "aliases": [
+      "바깥갈비사이근"
+    ]
+  },
+  "internal intercostal muscle": {
+    "ko": "내늑간근",
+    "aliases": [
+      "속갈비사이근"
+    ]
+  },
+  "diaphragm": {
+    "ko": "횡격막",
+    "aliases": [
+      "가로막"
+    ],
+    "summary": "횡격막은 들숨에서 수축하며 하강해 흉강 부피를 증가시키는 주요 호흡근입니다."
+  },
+  "external oblique": {
+    "ko": "외복사근",
+    "aliases": [
+      "배바깥빗근"
+    ]
+  },
+  "psoas major": {
+    "ko": "대요근",
+    "aliases": [
+      "큰허리근",
+      "장요근"
+    ],
+    "summary": "대요근은 요추와 대퇴골을 연결하며 고관절 굴곡과 몸통·골반의 안정화에 기여합니다."
+  },
+  "iliacus": {
+    "ko": "장골근",
+    "aliases": [
+      "엉덩근",
+      "장요근"
+    ],
+    "summary": "장골근은 장골와에서 대퇴골 작은돌기로 이어지며 고관절 굴곡에 기여합니다."
+  },
+  "piriformis": {
+    "ko": "이상근",
+    "aliases": [
+      "궁둥구멍근"
+    ]
+  },
+  "obturator internus": {
+    "ko": "내폐쇄근",
+    "aliases": [
+      "속폐쇄근"
+    ]
+  },
+  "obturator externus": {
+    "ko": "외폐쇄근",
+    "aliases": [
+      "바깥폐쇄근"
+    ]
+  },
+  "quadratus femoris": {
+    "ko": "대퇴방형근",
+    "aliases": [
+      "넙다리네모근"
+    ]
+  },
+  "gluteus maximus": {
+    "ko": "대둔근",
+    "aliases": [
+      "큰볼기근"
+    ]
+  },
+  "gluteus medius": {
+    "ko": "중둔근",
+    "aliases": [
+      "중간볼기근"
+    ]
+  },
+  "gluteus minimus": {
+    "ko": "소둔근",
+    "aliases": [
+      "작은볼기근"
+    ]
+  },
+  "zone of quadriceps femoris": {
+    "ko": "대퇴사두근",
+    "aliases": [
+      "넙다리네갈래근",
+      "quadriceps femoris"
+    ]
+  },
+  "rectus femoris": {
+    "ko": "대퇴직근",
+    "aliases": [
+      "넙다리곧은근"
+    ]
+  },
+  "vastus lateralis": {
+    "ko": "외측광근",
+    "aliases": [
+      "가쪽넓은근"
+    ]
+  },
+  "vastus medialis": {
+    "ko": "내측광근",
+    "aliases": [
+      "안쪽넓은근"
+    ]
+  },
+  "vastus intermedius": {
+    "ko": "중간광근",
+    "aliases": [
+      "중간넓은근"
+    ]
+  },
+  "sartorius": {
+    "ko": "봉공근",
+    "aliases": [
+      "넙다리빗근"
+    ]
+  },
+  "semitendinosus": {
+    "ko": "반건양근",
+    "aliases": [
+      "반힘줄근"
+    ]
+  },
+  "semimembranosus": {
+    "ko": "반막양근",
+    "aliases": [
+      "반막근"
+    ]
+  },
+  "head of biceps femoris": {
+    "ko": "대퇴이두근",
+    "aliases": [
+      "넙다리두갈래근",
+      "biceps femoris"
+    ]
+  },
+  "long head of biceps femoris": {
+    "ko": "대퇴이두근 장두",
+    "aliases": [
+      "넙다리두갈래근 긴갈래"
+    ]
+  },
+  "short head of biceps femoris": {
+    "ko": "대퇴이두근 단두",
+    "aliases": [
+      "넙다리두갈래근 짧은갈래"
+    ]
+  },
+  "adductor magnus": {
+    "ko": "대내전근",
+    "aliases": [
+      "큰모음근"
+    ]
+  },
+  "adductor longus": {
+    "ko": "장내전근",
+    "aliases": [
+      "긴모음근"
+    ]
+  },
+  "adductor brevis": {
+    "ko": "단내전근",
+    "aliases": [
+      "짧은모음근"
+    ]
+  },
+  "gracilis": {
+    "ko": "박근",
+    "aliases": [
+      "두덩정강근"
+    ]
+  },
+  "pectineus": {
+    "ko": "치골근",
+    "aliases": [
+      "두덩근"
+    ]
+  },
+  "tibialis anterior": {
+    "ko": "전경골근",
+    "aliases": [
+      "앞정강근"
+    ]
+  },
+  "tibialis posterior": {
+    "ko": "후경골근",
+    "aliases": [
+      "뒤정강근"
+    ]
+  },
+  "soleus": {
+    "ko": "가자미근",
+    "aliases": [
+      "가자미근육"
+    ]
+  },
+  "head of gastrocnemius": {
+    "ko": "비복근",
+    "aliases": [
+      "장딴지근",
+      "gastrocnemius"
+    ]
+  },
+  "medial head of gastrocnemius": {
+    "ko": "비복근 내측두",
+    "aliases": [
+      "장딴지근 안쪽갈래"
+    ]
+  },
+  "lateral head of gastrocnemius": {
+    "ko": "비복근 외측두",
+    "aliases": [
+      "장딴지근 가쪽갈래"
+    ]
+  },
+  "coracobrachialis": {
+    "ko": "오훼완근",
+    "aliases": [
+      "부리위팔근"
+    ]
+  },
+  "brachialis": {
+    "ko": "상완근",
+    "aliases": [
+      "위팔근"
+    ]
+  },
+  "short head of biceps brachii": {
+    "ko": "상완이두근 단두",
+    "aliases": [
+      "위팔두갈래근 짧은갈래"
+    ]
+  },
+  "long head of biceps brachii": {
+    "ko": "상완이두근 장두",
+    "aliases": [
+      "위팔두갈래근 긴갈래"
+    ]
+  },
+  "long head of triceps brachii": {
+    "ko": "상완삼두근 장두",
+    "aliases": [
+      "위팔세갈래근 긴갈래"
+    ]
+  },
+  "lateral head of triceps brachii": {
+    "ko": "상완삼두근 외측두",
+    "aliases": [
+      "위팔세갈래근 가쪽갈래"
+    ]
+  },
+  "medial head of triceps brachii": {
+    "ko": "상완삼두근 내측두",
+    "aliases": [
+      "위팔세갈래근 안쪽갈래"
+    ]
+  },
+  "brachioradialis": {
+    "ko": "상완요골근",
+    "aliases": [
+      "위팔노근"
+    ]
+  },
+  "flexor carpi radialis": {
+    "ko": "요측수근굴근",
+    "aliases": [
+      "노쪽손목굽힘근"
+    ]
+  },
+  "flexor digitorum superficialis": {
+    "ko": "천지굴근",
+    "aliases": [
+      "얕은손가락굽힘근"
+    ]
+  },
+  "flexor digitorum profundus": {
+    "ko": "심지굴근",
+    "aliases": [
+      "깊은손가락굽힘근"
+    ]
+  },
+  "extensor digitorum": {
+    "ko": "총지신근",
+    "aliases": [
+      "손가락폄근"
+    ]
+  },
+  "extensor carpi ulnaris": {
+    "ko": "척측수근신근",
+    "aliases": [
+      "자쪽손목폄근"
+    ]
+  },
+  "pronator quadratus": {
+    "ko": "방형회내근",
+    "aliases": [
+      "네모엎침근"
+    ]
+  },
+  "supinator": {
+    "ko": "회외근",
+    "aliases": [
+      "뒤침근"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+name: Korean anatomy V1 CI
+
+on:
+  push:
+    branches: [feature/korean-anatomy-v1]
+  pull_request:
+    paths:
+      - 'app/**'
+      - 'scripts/**'
+      - '.github/workflows/korean-anatomy.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: node scripts/validate-korean-anatomy.mjs
+      - run: node scripts/validate-atlas.mjs
+      - run: node scripts/validate-interactions.mjs
+      - run: npm run build
