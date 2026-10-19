@@ -3,7 +3,7 @@ import glossary from './anatomy-ko.json';
 
 type KoreanEntry = { ko: string; aliases: string[]; summary?: string };
 const TERMS = glossary as Record<string, KoreanEntry>;
-const normalize = (value: string) => value.normalize('NFKC').toLocaleLowerCase().replace(/[\\s()\\-_/·.,]/g, '');
+const normalize = (value: string) => value.normalize('NFKC').toLocaleLowerCase().replace(/[\s()/_·.,-]/g, '');
 
 export const KOREAN_SYSTEMS: Partial<Record<SystemId, string>> = {
   skeletal: '골격계',
