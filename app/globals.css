@@ -98,3 +98,7 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
  .detail-sheet .detail-actions{gap:5px!important;flex-direction:row!important}
  .detail-sheet .detail-actions button{min-height:35px!important;font-size:11px!important;padding:5px 8px!important}
 }
+
+/* Korean muscle attachment teaching panel */
+.attachment-info{display:grid;gap:7px;border-top:1px solid #d9dfe2;padding-top:12px}.attachment-info h3{font-size:14px;font-weight:600}.attachment-info p{font-size:13px;line-height:1.55;color:#475665}.attachment-info p strong{display:block;color:#253646;font-size:11px;margin-bottom:2px}.attachment-info small{font-size:10px;color:#7a8792;line-height:1.4}.attachment-info button{font-size:12px;min-height:34px}
+@media(max-width:767px) and (orientation:portrait){.detail-sheet:has(.attachment-info){max-height:225px!important}.detail-sheet:has(.attachment-info) .detail-scroll{max-height:110px!important}.detail-sheet:has(.attachment-info) .attachment-info{padding-top:6px}}
