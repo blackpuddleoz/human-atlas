@@ -8,6 +8,7 @@ const normalize = (value: string) => value.normalize('NFKC').toLocaleLowerCase()
 export const KOREAN_SYSTEMS: Partial<Record<SystemId, string>> = {
   skeletal: '골격계',
   muscular: '근육계',
+  cardiac:'심장',sensory:'감각기관',arterial:'동맥계',venous:'정맥계',nervous:'신경계',respiratory:'호흡계',digestive:'소화계',urinary:'비뇨계',lymphatic:'림프계',endocrine:'내분비계',reproductive:'생식계',integumentary:'외피계',connective:'결합조직',
 };
 
 export function koreanSystemName(system: SystemId, fallback: string): string {
