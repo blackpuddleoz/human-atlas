@@ -38,8 +38,38 @@ function translatedEntry(name: string): KoreanEntry | null {
   };
 }
 
+
+/** Model catalogue naming conventions (BodyParts3D): bilateral infixes and
+ * numbered vertebrae, ribs, phalanges and teeth. */
+const ORDINAL_NUMBER:Record<string,number>={first:1,second:2,third:3,fourth:4,fifth:5,sixth:6,seventh:7,eighth:8,ninth:9,tenth:10,eleventh:11,twelfth:12};
+const DIGITS:Record<string,string>={thumb:'엄지손가락',index:'집게손가락',middle:'가운데손가락',ring:'약손가락',little:'새끼',big:'엄지발가락',central:'중절치',lateral:'측절치'};
+function catalogueKorean(input:string):string|null{
+ const name=input.trim().toLowerCase();
+ const bilateral=name.match(/^(left|right) (.+)$/);
+ if(bilateral){const ko=catalogueKorean(bilateral[2])??translatedEntry(bilateral[2])?.ko;if(ko)return (bilateral[1]==='left'?'왼쪽 ':'오른쪽 ')+ko;}
+ const middle=name.match(/^(.+?) of (left|right) (.+)$/);
+ if(middle){const core=catalogueKorean(middle[1]+' of '+middle[3])??translatedEntry(middle[1]+' of '+middle[3])?.ko;
+ if(core)return (middle[2]==='left'?'왼쪽 ':'오른쪽 ')+core;
+ const tail=catalogueKorean(middle[3])??translatedEntry(middle[3])?.ko;
+ const head=catalogueKorean(middle[1])??translatedEntry(middle[1])?.ko;
+ if(tail&&head)return (middle[2]==='left'?'왼쪽 ':'오른쪽 ')+tail+' '+head;
+ }
+ const numbered=name.match(/^(first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth|eleventh|twelfth) (cervical|thoracic|lumbar) vertebra$/);
+ if(numbered)return ({cervical:'경추',thoracic:'흉추',lumbar:'요추'} as Record<string,string>)[numbered[2]]+' '+ORDINAL_NUMBER[numbered[1]]+'번';
+ const disc=name.match(/^intervertebral disk of (.+)$/);
+ if(disc){const ko=catalogueKorean(disc[1])??translatedEntry(disc[1])?.ko;if(ko)return ko+' 추간판';}
+ const ordinal=name.match(/^(first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth|eleventh|twelfth) (rib|costal cartilage|metacarpal bone|metatarsal bone)$/);
+ if(ordinal)return ORDINAL_NUMBER[ordinal[1]]+'번 '+({'rib':'늑골','costal cartilage':'늑연골','metacarpal bone':'중수골','metatarsal bone':'중족골'} as Record<string,string>)[ordinal[2]];
+ const phalanx=name.match(/^(proximal|middle|distal) phalanx of (left|right) (big|fourth|index|little|middle|ring|second|third|thumb) (toe|finger)$/);
+ if(phalanx){const side=phalanx[2]==='left'?'왼쪽':'오른쪽';const finger=phalanx[4]==='finger';const digit=({big:'엄지',fourth:'넷째',index:'둘째',little:'새끼',middle:'셋째',ring:'넷째',second:'둘째',third:'셋째',thumb:'엄지'} as Record<string,string>)[phalanx[3]];return side+' '+digit+(finger?'손가락':'발가락')+' '+({proximal:'몸쪽마디뼈',middle:'중간마디뼈',distal:'끝마디뼈'} as Record<string,string>)[phalanx[1]];}
+ const tooth=name.match(/^(upper|lower) (first|second|central|lateral)? ?secondary (molar|premolar|incisor|canine) tooth$/);
+ if(tooth){const kind=({molar:'큰어금니',premolar:'작은어금니',incisor:'앞니',canine:'송곳니'} as Record<string,string>)[tooth[3]];return (tooth[1]==='upper'?'위턱 ':'아래턱 ')+(tooth[2]?(ORDINAL_NUMBER[tooth[2]]??(tooth[2]==='central'?1:2))+'번째 ':'')+'영구 '+kind;}
+ const simple=name.match(/^(left|right) (upper|lower) (.+)$/);
+ if(simple){const core=catalogueKorean(simple[2]+' '+simple[3]);if(core)return (simple[1]==='left'?'왼쪽 ':'오른쪽 ')+core;}
+ return null;
+}
 export function getKoreanName(englishName: string): string {
-  return translatedEntry(englishName)?.ko ?? fallbackKorean(englishName);
+  return translatedEntry(englishName)?.ko ?? catalogueKorean(englishName) ?? fallbackKorean(englishName);
 }
 
 export function getKoreanSummary(englishName: string): string | null {
