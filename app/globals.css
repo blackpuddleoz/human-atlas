@@ -105,3 +105,5 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 
 .attachment-modes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin:5px 0}
 .attachment-modes button{padding:5px 2px!important;min-width:0;font-size:11px!important}
+
+.attachment-sites{display:grid;gap:7px;padding:10px 0;border-top:1px solid #d9dfe2}.attachment-sites h4{font-size:12px;font-weight:600}.attachment-site{display:flex;gap:8px;align-items:baseline;font-size:12px;line-height:1.45}.attachment-site>span:first-child{font-size:10px;font-weight:700;flex-shrink:0}.site-origin{color:#b46b10}.site-insertion{color:#316fc0}
