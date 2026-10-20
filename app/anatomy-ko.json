@@ -844,5 +844,505 @@
     "aliases": [
       "뒤침근"
     ]
+  },
+  "gingiva of upper jaw": {
+    "ko": "위턱 잇몸",
+    "aliases": []
+  },
+  "gingiva of lower jaw": {
+    "ko": "아래턱 잇몸",
+    "aliases": []
+  },
+  "body of sternum": {
+    "ko": "흉골체",
+    "aliases": []
+  },
+  "cricoid cartilage": {
+    "ko": "윤상연골",
+    "aliases": []
+  },
+  "thyroid cartilage": {
+    "ko": "갑상연골",
+    "aliases": []
+  },
+  "arytenoid cartilage": {
+    "ko": "피열연골",
+    "aliases": []
+  },
+  "corniculate cartilage": {
+    "ko": "소각연골",
+    "aliases": []
+  },
+  "cuneiform cartilage": {
+    "ko": "설상연골",
+    "aliases": []
+  },
+  "major alar cartilage": {
+    "ko": "큰콧방울연골",
+    "aliases": []
+  },
+  "ethmoid": {
+    "ko": "사골",
+    "aliases": []
+  },
+  "sphenoid bone": {
+    "ko": "접형골",
+    "aliases": []
+  },
+  "vomer": {
+    "ko": "서골",
+    "aliases": []
+  },
+  "hyoid bone": {
+    "ko": "설골",
+    "aliases": []
+  },
+  "nasal bone": {
+    "ko": "비골",
+    "aliases": []
+  },
+  "palatine bone": {
+    "ko": "구개골",
+    "aliases": []
+  },
+  "zygomatic bone": {
+    "ko": "관골",
+    "aliases": []
+  },
+  "sesamoid bone of foot": {
+    "ko": "발 종자뼈",
+    "aliases": []
+  },
+  "intermediate cuneiform bone": {
+    "ko": "중간쐐기뼈",
+    "aliases": []
+  },
+  "lateral cuneiform bone": {
+    "ko": "가쪽쐐기뼈",
+    "aliases": []
+  },
+  "medial cuneiform bone": {
+    "ko": "안쪽쐐기뼈",
+    "aliases": []
+  },
+  "iliotibial tract": {
+    "ko": "장경인대",
+    "aliases": []
+  },
+  "fibularis brevis": {
+    "ko": "단비골근",
+    "aliases": []
+  },
+  "fibularis longus": {
+    "ko": "장비골근",
+    "aliases": []
+  },
+  "fibularis tertius": {
+    "ko": "제3비골근",
+    "aliases": []
+  },
+  "abductor hallucis": {
+    "ko": "무지외전근",
+    "aliases": []
+  },
+  "abductor pollicis brevis": {
+    "ko": "단무지외전근",
+    "aliases": []
+  },
+  "abductor pollicis longus": {
+    "ko": "장무지외전근",
+    "aliases": []
+  },
+  "adductor minimus": {
+    "ko": "소내전근",
+    "aliases": []
+  },
+  "anconeus": {
+    "ko": "주근",
+    "aliases": []
+  },
+  "aryepiglotticus": {
+    "ko": "피열후두개근",
+    "aliases": []
+  },
+  "coccygeus": {
+    "ko": "미골근",
+    "aliases": []
+  },
+  "digastric": {
+    "ko": "이복근",
+    "aliases": []
+  },
+  "extensor carpi radialis brevis": {
+    "ko": "단요측수근신근",
+    "aliases": []
+  },
+  "extensor carpi radialis longus": {
+    "ko": "장요측수근신근",
+    "aliases": []
+  },
+  "extensor digiti minimi": {
+    "ko": "소지신근",
+    "aliases": []
+  },
+  "extensor digitorum longus": {
+    "ko": "장지신근",
+    "aliases": []
+  },
+  "extensor hallucis brevis": {
+    "ko": "단무지신근",
+    "aliases": []
+  },
+  "extensor hallucis longus": {
+    "ko": "장무지신근",
+    "aliases": []
+  },
+  "extensor indicis": {
+    "ko": "시지신근",
+    "aliases": []
+  },
+  "extensor pollicis brevis": {
+    "ko": "단무지신근",
+    "aliases": []
+  },
+  "extensor pollicis longus": {
+    "ko": "장무지신근",
+    "aliases": []
+  },
+  "flexor accessorius": {
+    "ko": "족저방형근",
+    "aliases": []
+  },
+  "flexor digitorum brevis": {
+    "ko": "단지굴근",
+    "aliases": []
+  },
+  "flexor digitorum longus": {
+    "ko": "장지굴근",
+    "aliases": []
+  },
+  "flexor hallucis longus": {
+    "ko": "장무지굴근",
+    "aliases": []
+  },
+  "flexor pollicis brevis": {
+    "ko": "단무지굴근",
+    "aliases": []
+  },
+  "flexor pollicis longus": {
+    "ko": "장무지굴근",
+    "aliases": []
+  },
+  "gemellus inferior": {
+    "ko": "하쌍자근",
+    "aliases": []
+  },
+  "gemellus superior": {
+    "ko": "상쌍자근",
+    "aliases": []
+  },
+  "genioglossus": {
+    "ko": "이설근",
+    "aliases": []
+  },
+  "geniohyoid": {
+    "ko": "이설골근",
+    "aliases": []
+  },
+  "hyoglossus": {
+    "ko": "설골설근",
+    "aliases": []
+  },
+  "iliococcygeus": {
+    "ko": "장미골근",
+    "aliases": []
+  },
+  "iliocostalis cervicis": {
+    "ko": "경장늑근",
+    "aliases": []
+  },
+  "inferior oblique": {
+    "ko": "하사근",
+    "aliases": []
+  },
+  "inferior rectus": {
+    "ko": "하직근",
+    "aliases": []
+  },
+  "infraspinatus muscle": {
+    "ko": "극하근",
+    "aliases": []
+  },
+  "innermost intercostal muscle": {
+    "ko": "최내늑간근",
+    "aliases": []
+  },
+  "interspinalis thoracis": {
+    "ko": "흉극간근",
+    "aliases": []
+  },
+  "lateral crico-arytenoid": {
+    "ko": "외측윤상피열근",
+    "aliases": []
+  },
+  "lateral lumbar intertransversarius": {
+    "ko": "외측요횡돌기간근",
+    "aliases": []
+  },
+  "lateral rectus": {
+    "ko": "외직근",
+    "aliases": []
+  },
+  "levator palpebrae superioris": {
+    "ko": "상안검거근",
+    "aliases": []
+  },
+  "levator veli palatini": {
+    "ko": "구개범장근",
+    "aliases": []
+  },
+  "longissimus capitis": {
+    "ko": "두최장근",
+    "aliases": []
+  },
+  "longus capitis": {
+    "ko": "두장근",
+    "aliases": []
+  },
+  "lumbar rotator": {
+    "ko": "요회선근",
+    "aliases": []
+  },
+  "medial lumbar intertransversarius": {
+    "ko": "내측요횡돌기간근",
+    "aliases": []
+  },
+  "medial rectus": {
+    "ko": "내직근",
+    "aliases": []
+  },
+  "mylohyoid": {
+    "ko": "악설골근",
+    "aliases": []
+  },
+  "oblique arytenoid": {
+    "ko": "사피열근",
+    "aliases": []
+  },
+  "obliquus capitis inferior": {
+    "ko": "하두사근",
+    "aliases": []
+  },
+  "obliquus capitis superior": {
+    "ko": "상두사근",
+    "aliases": []
+  },
+  "omohyoid": {
+    "ko": "견갑설골근",
+    "aliases": []
+  },
+  "opponens pollicis": {
+    "ko": "무지대립근",
+    "aliases": []
+  },
+  "palmaris longus": {
+    "ko": "장장근",
+    "aliases": []
+  },
+  "plantaris": {
+    "ko": "족척근",
+    "aliases": []
+  },
+  "platysma": {
+    "ko": "광경근",
+    "aliases": []
+  },
+  "popliteus": {
+    "ko": "슬와근",
+    "aliases": []
+  },
+  "posterior crico-arytenoid": {
+    "ko": "후윤상피열근",
+    "aliases": []
+  },
+  "pubococcygeus": {
+    "ko": "치골미골근",
+    "aliases": []
+  },
+  "puborectalis": {
+    "ko": "치골직장근",
+    "aliases": []
+  },
+  "rectus capitis anterior": {
+    "ko": "전두직근",
+    "aliases": []
+  },
+  "rectus capitis lateralis": {
+    "ko": "외측두직근",
+    "aliases": []
+  },
+  "rectus capitis posterior major": {
+    "ko": "대후두직근",
+    "aliases": []
+  },
+  "rectus capitis posterior minor": {
+    "ko": "소후두직근",
+    "aliases": []
+  },
+  "spinalis": {
+    "ko": "극근",
+    "aliases": []
+  },
+  "sternohyoid": {
+    "ko": "흉골설골근",
+    "aliases": []
+  },
+  "sternothyroid": {
+    "ko": "흉골갑상근",
+    "aliases": []
+  },
+  "stylohyoid": {
+    "ko": "경돌설골근",
+    "aliases": []
+  },
+  "subclavius": {
+    "ko": "쇄골하근",
+    "aliases": []
+  },
+  "superficial perineal muscle": {
+    "ko": "표재회음근",
+    "aliases": []
+  },
+  "superior oblique": {
+    "ko": "상사근",
+    "aliases": []
+  },
+  "superior rectus": {
+    "ko": "상직근",
+    "aliases": []
+  },
+  "tensor veli palatini": {
+    "ko": "구개범장근",
+    "aliases": []
+  },
+  "thoracic rotator": {
+    "ko": "흉회선근",
+    "aliases": []
+  },
+  "thyro-arytenoid": {
+    "ko": "갑상피열근",
+    "aliases": []
+  },
+  "thyrohyoid": {
+    "ko": "갑상설골근",
+    "aliases": []
+  },
+  "transversus thoracis": {
+    "ko": "흉횡근",
+    "aliases": []
+  },
+  "transverse arytenoid": {
+    "ko": "횡피열근",
+    "aliases": []
+  },
+  "uvular muscle": {
+    "ko": "구개수근",
+    "aliases": []
+  },
+  "vocalis": {
+    "ko": "성대근",
+    "aliases": []
+  },
+  "external anal sphincter": {
+    "ko": "외항문괄약근",
+    "aliases": []
+  },
+  "interspinales cervicis": {
+    "ko": "경극간근",
+    "aliases": []
+  },
+  "interspinales lumborum": {
+    "ko": "요극간근",
+    "aliases": []
+  },
+  "anterior cervical intertransversarii": {
+    "ko": "전경횡돌기간근",
+    "aliases": []
+  },
+  "posterior cervical intertransversarii": {
+    "ko": "후경횡돌기간근",
+    "aliases": []
+  },
+  "levatores costarum breves": {
+    "ko": "단늑골거근",
+    "aliases": []
+  },
+  "levatores costarum longi": {
+    "ko": "장늑골거근",
+    "aliases": []
+  },
+  "dorsal interossei": {
+    "ko": "배측골간근",
+    "aliases": []
+  },
+  "palmar interossei": {
+    "ko": "장측골간근",
+    "aliases": []
+  },
+  "plantar interosseous": {
+    "ko": "족저골간근",
+    "aliases": []
+  },
+  "lumbrical": {
+    "ko": "충양근",
+    "aliases": []
+  },
+  "lumbricals": {
+    "ko": "충양근",
+    "aliases": []
+  },
+  "abductor digiti minimi": {
+    "ko": "소지외전근",
+    "aliases": []
+  },
+  "flexor digiti minimi brevis": {
+    "ko": "단소지굴근",
+    "aliases": []
+  },
+  "opponens digiti minimi": {
+    "ko": "소지대립근",
+    "aliases": []
+  },
+  "adductor hallucis": {
+    "ko": "무지내전근",
+    "aliases": []
+  },
+  "adductor pollicis": {
+    "ko": "무지내전근",
+    "aliases": []
+  },
+  "flexor hallucis brevis": {
+    "ko": "단무지굴근",
+    "aliases": []
+  },
+  "flexor carpi ulnaris": {
+    "ko": "척측수근굴근",
+    "aliases": []
+  },
+  "pronator teres": {
+    "ko": "원회내근",
+    "aliases": []
+  },
+  "cricothyroid": {
+    "ko": "윤상갑상근",
+    "aliases": []
+  },
+  "longus colli": {
+    "ko": "경장근",
+    "aliases": []
+  },
+  "papillary muscle": {
+    "ko": "유두근",
+    "aliases": []
   }
 }
