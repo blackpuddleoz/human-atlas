@@ -1,4 +1,5 @@
 import {getKoreanName} from './korean-anatomy';
+import {getValidatedLandmarks} from './attachment-landmarks';
 import {useEffect,useRef} from 'react';
 import * as T from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
@@ -39,6 +40,28 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   const markerMaterial=new T.PointsMaterial({color:0x64748b,size:5,sizeAttenuation:false,transparent:true,opacity:.72,depthTest:false});
   markerMaterial.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <clipping_planes_fragment>','#include <clipping_planes_fragment>\nif (distance(gl_PointCoord, vec2(0.5)) > 0.5) discard;');};
   const markers=new T.Points(markerGeometry,markerMaterial);markers.frustumCulled=false;markers.renderOrder=10;markers.visible=false;scene.add(markers);
+  const landmarkGroup=new T.Group();scene.add(landmarkGroup);
+  const landmarkGeometry=new T.SphereGeometry(.012,12,8);
+  const landmarkMaterials={origin:new T.MeshBasicMaterial({color:0xf7a637,depthTest:false}),insertion:new T.MeshBasicMaterial({color:0x4a94ef,depthTest:false})};
+  let lastLandmarkKey='';
+  const syncLandmarks=(s:SceneState)=>{
+   const key=s.selected.join(',')+':'+(s.originBones??[]).join(',')+':'+(s.insertionBones??[]).join(',');
+   if(key===lastLandmarkKey)return;
+   lastLandmarkKey=key;
+   landmarkGroup.clear();
+   const names=atlas.parts.filter(p=>s.selected.includes(p.id)).map(p=>p.name);
+   const valid=getValidatedLandmarks(atlas,names);
+   for(const point of valid){
+    if(point.kind==='origin'&&!(s.originBones??[]).includes(point.bonePartId))continue;
+    if(point.kind==='insertion'&&!(s.insertionBones??[]).includes(point.bonePartId))continue;
+    const mesh=new T.Mesh(landmarkGeometry,landmarkMaterials[point.kind]);
+    mesh.position.fromArray(point.position);
+    mesh.renderOrder=20;
+    mesh.userData={label:point.label,source:point.source};
+    landmarkGroup.add(mesh);
+   }
+   dirty=true;
+  };
   const hover=document.createElement('div');hover.className='part-hover';hover.setAttribute('role','tooltip');hover.hidden=true;el.appendChild(hover);
   type Target={index:number;x:number;y:number;left:number;right:number;top:number;bottom:number};let targets:Target[]=[];
   const projected=new T.Vector3();
@@ -99,6 +122,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   const animate=()=>{
    if(disposed)return;frame=requestAnimationFrame(animate);const dt=Math.min(clock.getDelta(),.05),s=latest.current;
    const changed=lastState?.visible!==s.visible||lastState?.selected!==s.selected||lastState?.isolate!==s.isolate||lastState?.attachmentBones!==s.attachmentBones||lastState?.originBones!==s.originBones||lastState?.insertionBones!==s.insertionBones;
+   syncLandmarks(s);
    const moving=Math.abs(amount-s.explode)>.0001;
    if(moving){amount=T.MathUtils.damp(amount,s.explode,8,dt);dirty=true;}
    if(changed||moving||lastExtent<0){
