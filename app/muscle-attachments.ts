@@ -5,6 +5,14 @@ export interface MuscleAttachment {
  origin:string; insertion:string; action:string; yoga?:string; originBones:string[]; insertionBones:string[]; sites?:{kind:'origin'|'insertion';label:string;bone:string;status:'text-verified'|'coordinate-verified'}[];
 }
 const DATA:Record<string,MuscleAttachment>={
+ 'lateral head of gastrocnemius':{"origin":"대퇴골 가쪽관절융기 위쪽 뒤면","insertion":"아킬레스힘줄을 통해 종골 뒤면","action":"발목 발바닥굽힘·무릎 굴곡 보조","originBones":["femur"],"insertionBones":["calcaneus"]},
+ 'medial head of gastrocnemius':{"origin":"대퇴골 안쪽관절융기 위쪽 뒤면","insertion":"아킬레스힘줄을 통해 종골 뒤면","action":"발목 발바닥굽힘·무릎 굴곡 보조","originBones":["femur"],"insertionBones":["calcaneus"]},
+ 'long head of biceps femoris':{"origin":"좌골결절","insertion":"비골두","action":"고관절 신전·무릎 굴곡·굽힌 무릎 가쪽돌림","originBones":["hip bone"],"insertionBones":["fibula"]},
+ 'short head of biceps femoris':{"origin":"대퇴골 거친선 가쪽입술과 가쪽위관절융기선","insertion":"비골두","action":"무릎 굴곡·굽힌 무릎 가쪽돌림(고관절은 지나지 않음)","originBones":["femur"],"insertionBones":["fibula"]},
+ 'clavicular part of pectoralis major':{"origin":"쇄골 안쪽 절반의 앞면","insertion":"상완골 결절간구 가쪽입술","action":"어깨관절 굴곡·모음·안쪽돌림 보조","originBones":["clavicle"],"insertionBones":["humerus"]},
+ 'sternocostal part of pectoralis major':{"origin":"흉골 앞면 및 위쪽 늑연골","insertion":"상완골 결절간구 가쪽입술","action":"어깨관절 모음·안쪽돌림, 굴곡된 팔의 신전 보조","originBones":["sternum","rib"],"insertionBones":["humerus"]},
+ 'abdominal part of pectoralis major':{"origin":"외복사근 널힘줄의 앞쪽 부분","insertion":"상완골 결절간구 가쪽입술","action":"어깨관절 모음·안쪽돌림 및 굴곡된 팔의 신전 보조","originBones":["rib"],"insertionBones":["humerus"]},
+
  'adductor longus':{"origin":"치골체 앞면","insertion":"대퇴골 거친선 중간 1/3","action":"고관절 모음 및 굴곡 보조","originBones":["hip bone"],"insertionBones":["femur"]},
  'adductor brevis':{"origin":"치골체와 치골 아래가지","insertion":"대퇴골 치골근선 및 거친선 몸쪽 부분","action":"고관절 모음 및 굴곡 보조","originBones":["hip bone"],"insertionBones":["femur"]},
  'adductor magnus':{"origin":"치골 아래가지·좌골가지·좌골결절","insertion":"대퇴골 거친선·내측상과선·내전근결절","action":"고관절 모음, 내전부 굴곡 보조, 햄스트링부 신전","originBones":["hip bone"],"insertionBones":["femur"]},
