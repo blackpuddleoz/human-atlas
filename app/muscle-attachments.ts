@@ -5,6 +5,20 @@ export interface MuscleAttachment {
  origin:string; insertion:string; action:string; yoga?:string; originBones:string[]; insertionBones:string[]; sites?:{kind:'origin'|'insertion';label:string;bone:string;status:'text-verified'|'coordinate-verified'}[];
 }
 const DATA:Record<string,MuscleAttachment>={
+ 'long head of biceps brachii':{"origin":"견갑골 관절와위결절","insertion":"요골조면 및 이두근널힘줄","action":"팔꿈치 굴곡·전완 뒤침, 어깨 안정화 보조","originBones":["scapula"],"insertionBones":["radius"]},
+ 'short head of biceps brachii':{"origin":"견갑골 오훼돌기","insertion":"요골조면 및 이두근널힘줄","action":"팔꿈치 굴곡·전완 뒤침, 어깨 굴곡 보조","originBones":["scapula"],"insertionBones":["radius"]},
+ 'long head of triceps brachii':{"origin":"견갑골 관절와아래결절","insertion":"척골 주두","action":"팔꿈치 폄, 어깨 신전·모음 보조","originBones":["scapula"],"insertionBones":["ulna"]},
+ 'lateral head of triceps brachii':{"origin":"상완골 요골신경고랑 위쪽 뒤면","insertion":"척골 주두","action":"팔꿈치 폄","originBones":["humerus"],"insertionBones":["ulna"]},
+ 'medial head of triceps brachii':{"origin":"상완골 요골신경고랑 아래쪽 뒤면","insertion":"척골 주두","action":"팔꿈치 폄","originBones":["humerus"],"insertionBones":["ulna"]},
+ 'descending part of trapezius':{"origin":"후두골 위목덜미선·바깥뒤통수뼈융기·목덜미인대","insertion":"쇄골 가쪽 1/3","action":"견갑골 거상 및 상방회전 보조","originBones":["occipital","cervical vertebra"],"insertionBones":["clavicle"]},
+ 'transverse part of trapezius':{"origin":"제1~4흉추 극돌기 및 극상인대","insertion":"견봉·견갑극","action":"견갑골 후인","originBones":["thoracic vertebra"],"insertionBones":["scapula"]},
+ 'ascending part of trapezius':{"origin":"제5~12흉추 극돌기 및 극상인대","insertion":"견갑극 안쪽 부분","action":"견갑골 하강 및 상방회전 보조","originBones":["thoracic vertebra"],"insertionBones":["scapula"]},
+ 'humeral head of pronator teres':{"origin":"상완골 안쪽위관절융기","insertion":"요골 몸통 가쪽면 중간부","action":"전완 엎침·팔꿈치 굴곡 보조","originBones":["humerus"],"insertionBones":["radius"]},
+ 'ulnar head of pronator teres':{"origin":"척골 구상돌기","insertion":"요골 몸통 가쪽면 중간부","action":"전완 엎침","originBones":["ulna"],"insertionBones":["radius"]},
+ 'humeral head of flexor carpi ulnaris':{"origin":"상완골 안쪽위관절융기","insertion":"두상골·유구골 갈고리·제5중수골 바닥","action":"손목 굴곡·자쪽치우침","originBones":["humerus"],"insertionBones":["pisiform","hamate","metacarpal"]},
+ 'ulnar head of flexor carpi ulnaris':{"origin":"척골 주두·뒤모서리","insertion":"두상골·유구골 갈고리·제5중수골 바닥","action":"손목 굴곡·자쪽치우침","originBones":["ulna"],"insertionBones":["pisiform","hamate","metacarpal"]},
+ 'infraspinatus muscle':{"origin":"견갑골 극하와","insertion":"상완골 대결절 중간면","action":"어깨관절 가쪽돌림 및 상완골두 안정화","originBones":["scapula"],"insertionBones":["humerus"]},
+
  'lateral head of gastrocnemius':{"origin":"대퇴골 가쪽관절융기 위쪽 뒤면","insertion":"아킬레스힘줄을 통해 종골 뒤면","action":"발목 발바닥굽힘·무릎 굴곡 보조","originBones":["femur"],"insertionBones":["calcaneus"]},
  'medial head of gastrocnemius':{"origin":"대퇴골 안쪽관절융기 위쪽 뒤면","insertion":"아킬레스힘줄을 통해 종골 뒤면","action":"발목 발바닥굽힘·무릎 굴곡 보조","originBones":["femur"],"insertionBones":["calcaneus"]},
  'long head of biceps femoris':{"origin":"좌골결절","insertion":"비골두","action":"고관절 신전·무릎 굴곡·굽힌 무릎 가쪽돌림","originBones":["hip bone"],"insertionBones":["fibula"]},
