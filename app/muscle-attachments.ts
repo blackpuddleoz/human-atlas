@@ -68,9 +68,9 @@ const DATA:Record<string,MuscleAttachment>={
 export function normalizeMuscleName(name:string):string{
  return name.toLowerCase().trim()
   .replace(/^(left|right) /,'')
-  .replace(/\\b(left|right)\\b /g,'')
+  .replace(/\b(left|right)\b /g,'')
   .replace(/ of (left|right) /g,' of ')
-  .replace(/\\s+/g,' ').trim();
+  .replace(/\s+/g,' ').trim();
 }
 export function getMuscleAttachment(name:string):MuscleAttachment|null{
  const key=normalizeMuscleName(name);
