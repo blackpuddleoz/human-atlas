@@ -72,8 +72,36 @@ export function getKoreanName(englishName: string): string {
   return translatedEntry(englishName)?.ko ?? catalogueKorean(englishName) ?? fallbackKorean(englishName);
 }
 
+const BONE_EXPLANATIONS: Array<[RegExp,string]> = [
+ [/scapula/i,'견갑골은 쇄골·상완골과 연결되는 어깨 복합체의 핵심 뼈입니다. 견봉, 오훼돌기, 견갑극과 관절와를 구분하고 견갑골의 상방·하방회전 및 전인·후인을 관찰합니다.'],
+ [/clavicle/i,'쇄골은 흉골과 견갑골을 연결하는 지지대 역할을 합니다. 흉쇄관절과 견봉쇄골관절의 움직임이 팔을 머리 위로 들어 올리는 동작에 기여합니다.'],
+ [/humerus/i,'상완골은 견갑골 관절와와 어깨관절을 이루고 아래쪽에서 팔꿈치관절을 형성합니다. 상완골두·대결절·소결절·삼각근조면을 구분합니다.'],
+ [/radius/i,'요골은 엄지손가락 쪽 전완뼈로 팔꿈치와 손목의 움직임, 전완의 엎침·뒤침에 관여합니다.'],
+ [/ulna/i,'척골은 새끼손가락 쪽 전완뼈로 주두와 활차패임을 통해 팔꿈치의 굽힘·폄에 기여합니다.'],
+ [/femur/i,'대퇴골은 고관절과 무릎관절을 잇는 긴뼈입니다. 대퇴골두·경부·대전자·소전자 및 관절융기를 구분하고 고관절 움직임과 하중 전달을 관찰합니다.'],
+ [/tibia/i,'경골은 체중을 주로 전달하는 종아리의 안쪽 긴뼈입니다. 경골고평부·경골조면·내과와 무릎·발목관절의 관계를 살펴봅니다.'],
+ [/fibula/i,'비골은 종아리의 가쪽 긴뼈로 발목 가쪽 안정성과 여러 근육의 부착에 기여합니다. 경골과의 연결과 외과 위치를 관찰합니다.'],
+ [/patella/i,'슬개골은 대퇴사두근 힘줄 안에 위치한 종자뼈입니다. 무릎을 펴는 힘의 전달과 슬개대퇴관절의 움직임을 관찰합니다.'],
+ [/sacrum/i,'천골은 척주와 골반을 연결하며 천장관절을 통해 몸통의 하중을 골반으로 전달합니다.'],
+ [/ilium|ischium|pubis|hip bone/i,'볼기뼈는 장골·좌골·치골이 결합한 구조로 비구를 형성합니다. 고관절의 움직임과 골반의 전방·후방경사를 구분해 관찰합니다.'],
+ [/cervical vertebra|atlas|axis/i,'경추는 목의 움직임과 머리 지지에 관여합니다. 척추체·관절돌기·횡돌기와 인접 분절의 관계를 살펴봅니다.'],
+ [/thoracic vertebra/i,'흉추는 늑골과 관절을 이루어 흉곽을 구성합니다. 흉추 신전·회전과 늑골의 움직임을 함께 관찰합니다.'],
+ [/lumbar vertebra/i,'요추는 몸통의 하중을 전달하고 굴곡·신전에 크게 관여합니다. 분절 움직임과 골반의 움직임을 구분해 관찰합니다.'],
+ [/rib|costal cartilage/i,'늑골과 늑연골은 흉곽을 형성하고 호흡 시 흉곽의 확장·수축에 참여합니다. 흉추와 흉골의 연결 관계를 관찰합니다.'],
+ [/sternum/i,'흉골은 흉곽 앞쪽의 편평뼈로 늑연골과 쇄골의 연결 지점입니다. 흉골병·몸통·검상돌기를 구분합니다.'],
+ [/calcaneus/i,'종골은 발뒤꿈치를 이루며 아킬레스힘줄이 부착합니다. 발목과 발의 하중 전달을 관찰합니다.'],
+ [/talus/i,'거골은 경골·비골과 발목관절을 이루고 종골과도 관절합니다. 발목의 발등굽힘·발바닥굽힘을 관찰합니다.'],
+ [/metacarpal|carpal|phalanx.*finger/i,'손의 작은 뼈는 손목·손허리·손가락관절을 구성합니다. 관절별 굽힘·폄과 손의 지지 기능을 관찰합니다.'],
+ [/metatarsal|tarsal|phalanx.*toe/i,'발의 작은 뼈는 발목과 발가락관절 및 발 아치를 구성합니다. 체중지지와 발가락 움직임을 관찰합니다.'],
+ [/tooth|incisor|molar|premolar|canine/i,'치아는 씹기와 음식물 절단에 관여하는 단단한 구강 구조입니다. 위턱·아래턱에서 위치를 구분합니다.'],
+ [/cartilage/i,'연골은 부위에 따라 관절면의 마찰을 줄이거나 구조를 지지하는 역할을 합니다. 이 구조가 인접한 뼈 및 연부조직과 어떻게 연결되는지 관찰합니다.'],
+];
+function boneSummary(name:string):string|null{
+ const normalized=name.replace(/\b(left|right)\b/gi,'').trim();
+ return BONE_EXPLANATIONS.find(([pattern])=>pattern.test(normalized))?.[1]??null;
+}
 export function getKoreanSummary(englishName: string): string | null {
-  return translatedEntry(englishName)?.summary ?? null;
+  return translatedEntry(englishName)?.summary ?? boneSummary(englishName);
 }
 
 export function conceptMatchesKoreanQuery(concept: Concept, query: string): boolean {
