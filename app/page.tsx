@@ -22,7 +22,7 @@ export default function Home(){
  const counts=useMemo(()=>Object.fromEntries(SYSTEMS.map(s=>[s.id,atlas?.parts.filter(p=>p.system===s.id).length??0])),[atlas]);
  const activeSystems=SYSTEMS.filter(s=>counts[s.id]>0);
  const selectedParts=state.selected.map(id=>parts.get(id)).filter(p=>!!p),selected=selectedParts[0],system=SYSTEMS.find(s=>s.id===selected?.system);
- const attachment=selected?.system==='muscular'&&chosen?getMuscleAttachment(chosen.name):null;
+ const attachment=selected?.system==='muscular'?getMuscleAttachment(selected.name)??(chosen?getMuscleAttachment(chosen.name):null):null;
  const [attachmentMode,setAttachmentMode]=useState<'off'|'origin'|'insertion'|'both'>('off');
  const showAttachments=attachmentMode!=='off';
  const attachmentBoneIds=useMemo(()=>{if(!atlas||!attachment||!showAttachments)return [];const names=[...attachment.originBones,...attachment.insertionBones];const side=selected?.name.toLowerCase().match(/\b(left|right)\b/)?.[1];return atlas.parts.filter(p=>p.system==='skeletal'&&names.some(n=>p.name.toLowerCase().includes(n))&&(!side||!(/^(left|right) /.test(p.name.toLowerCase()))||p.name.toLowerCase().startsWith(side+' '))).map(p=>p.id);},[atlas,attachment,showAttachments,selected?.name]);
