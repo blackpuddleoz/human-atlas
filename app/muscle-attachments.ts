@@ -5,6 +5,30 @@ export interface MuscleAttachment {
  origin:string; insertion:string; action:string; yoga?:string; originBones:string[]; insertionBones:string[]; sites?:{kind:'origin'|'insertion';label:string;bone:string;status:'text-verified'|'coordinate-verified'}[];
 }
 const DATA:Record<string,MuscleAttachment>={
+ 'adductor longus':{"origin":"치골체 앞면","insertion":"대퇴골 거친선 중간 1/3","action":"고관절 모음 및 굴곡 보조","originBones":["hip bone"],"insertionBones":["femur"]},
+ 'adductor brevis':{"origin":"치골체와 치골 아래가지","insertion":"대퇴골 치골근선 및 거친선 몸쪽 부분","action":"고관절 모음 및 굴곡 보조","originBones":["hip bone"],"insertionBones":["femur"]},
+ 'adductor magnus':{"origin":"치골 아래가지·좌골가지·좌골결절","insertion":"대퇴골 거친선·내측상과선·내전근결절","action":"고관절 모음, 내전부 굴곡 보조, 햄스트링부 신전","originBones":["hip bone"],"insertionBones":["femur"]},
+ 'gracilis':{"origin":"치골체와 치골 아래가지","insertion":"경골 안쪽 위부분(거위발)","action":"고관절 모음·무릎 굴곡·굽힌 무릎 안쪽돌림","originBones":["hip bone"],"insertionBones":["tibia"]},
+ 'pectineus':{"origin":"치골 빗살 및 인접 부위","insertion":"대퇴골 치골근선","action":"고관절 모음과 굴곡","originBones":["hip bone"],"insertionBones":["femur"]},
+ 'obturator internus':{"origin":"폐쇄막 안쪽면과 주변 골반뼈","insertion":"대퇴골 대전자 안쪽면","action":"고관절 가쪽돌림 및 굴곡 시 벌림 보조","originBones":["hip bone"],"insertionBones":["femur"]},
+ 'obturator externus':{"origin":"폐쇄막 바깥면과 주변 골반뼈","insertion":"대퇴골 전자와","action":"고관절 가쪽돌림 및 안정화","originBones":["hip bone"],"insertionBones":["femur"]},
+ 'quadratus femoris':{"origin":"좌골결절 가쪽모서리","insertion":"대퇴골 전자간능선의 사각근결절","action":"고관절 가쪽돌림 및 모음 보조","originBones":["hip bone"],"insertionBones":["femur"]},
+ 'vastus intermedius':{"origin":"대퇴골 몸통 앞·가쪽면","insertion":"슬개골 및 슬개인대를 거쳐 경골조면","action":"무릎관절 폄","originBones":["femur"],"insertionBones":["patella","tibia"]},
+ 'tibialis posterior':{"origin":"경골·비골 뒤면 및 골간막","insertion":"주상골조면·설상골 등 발바닥쪽 부착부","action":"발목 발바닥굽힘·발 안쪽번짐, 발 아치 지지","originBones":["tibia","fibula"],"insertionBones":["navicular","cuneiform"]},
+ 'fibularis longus':{"origin":"비골두와 비골 가쪽면 위부분","insertion":"제1중족골 바닥과 안쪽설상골 발바닥면","action":"발 가쪽번짐·발바닥굽힘 보조 및 가로아치 지지","originBones":["fibula"],"insertionBones":["first metatarsal","medial cuneiform"]},
+ 'fibularis brevis':{"origin":"비골 가쪽면 아래부분","insertion":"제5중족골 바닥의 조면","action":"발 가쪽번짐·발바닥굽힘 보조","originBones":["fibula"],"insertionBones":["fifth metatarsal"]},
+ 'flexor digitorum longus':{"origin":"경골 뒤면","insertion":"제2~5발가락 끝마디뼈 바닥면","action":"제2~5발가락 굽힘 및 발목 발바닥굽힘 보조","originBones":["tibia"],"insertionBones":["phalanx"]},
+ 'extensor digitorum longus':{"origin":"경골 가쪽관절융기·비골 앞면 및 골간막","insertion":"제2~5발가락 중간·끝마디뼈의 폄널힘줄","action":"제2~5발가락 폄 및 발목 발등굽힘","originBones":["tibia","fibula"],"insertionBones":["phalanx"]},
+ 'brachialis':{"origin":"상완골 앞면 아래쪽 절반","insertion":"척골 거친면 및 구상돌기","action":"팔꿈치 굴곡","originBones":["humerus"],"insertionBones":["ulna"]},
+ 'brachioradialis':{"origin":"상완골 가쪽위관절융기능선","insertion":"요골 붓돌기 몸쪽 부위","action":"팔꿈치 굴곡, 전완 중립위에서 작용이 두드러짐","originBones":["humerus"],"insertionBones":["radius"]},
+ 'pronator teres':{"origin":"상완골 안쪽위관절융기·척골 구상돌기","insertion":"요골 가쪽면 중간부분","action":"전완 엎침 및 팔꿈치 굴곡 보조","originBones":["humerus","ulna"],"insertionBones":["radius"]},
+ 'supinator':{"origin":"상완골 가쪽위관절융기·척골 회외근능선 등","insertion":"요골 몸쪽 1/3의 가쪽·앞·뒤면","action":"전완 뒤침","originBones":["humerus","ulna"],"insertionBones":["radius"]},
+ 'flexor carpi radialis':{"origin":"상완골 안쪽위관절융기","insertion":"제2중수골 바닥(일부 제3중수골)","action":"손목 굴곡·노쪽치우침","originBones":["humerus"],"insertionBones":["metacarpal"]},
+ 'flexor carpi ulnaris':{"origin":"상완골 안쪽위관절융기·척골 주두 및 뒤모서리","insertion":"두상골·유구골 갈고리·제5중수골 바닥","action":"손목 굴곡·자쪽치우침","originBones":["humerus","ulna"],"insertionBones":["pisiform","hamate","metacarpal"]},
+ 'extensor carpi radialis longus':{"origin":"상완골 가쪽위관절융기능선","insertion":"제2중수골 바닥 뒤면","action":"손목 폄·노쪽치우침","originBones":["humerus"],"insertionBones":["metacarpal"]},
+ 'extensor carpi radialis brevis':{"origin":"상완골 가쪽위관절융기","insertion":"제3중수골 바닥 뒤면","action":"손목 폄·노쪽치우침","originBones":["humerus"],"insertionBones":["metacarpal"]},
+ 'extensor carpi ulnaris':{"origin":"상완골 가쪽위관절융기·척골 뒤모서리","insertion":"제5중수골 바닥 뒤면","action":"손목 폄·자쪽치우침","originBones":["humerus","ulna"],"insertionBones":["metacarpal"]},
+
  'supraspinatus':{"origin":"견갑골 극상와","insertion":"상완골 대결절 위쪽면","action":"어깨관절 벌림 시작과 상완골두 안정화","originBones":["scapula"],"insertionBones":["humerus"],"yoga":"팔을 들어 올릴 때 회전근개가 상완골두를 안정화하는 역할을 관찰합니다."},
  'infraspinatus':{"origin":"견갑골 극하와","insertion":"상완골 대결절 중간면","action":"어깨관절 가쪽돌림과 상완골두 안정화","originBones":["scapula"],"insertionBones":["humerus"],"yoga":"팔을 뒤로 돌리는 동작에서 견갑골의 움직임과 상완골의 회전을 구분합니다."},
  'subscapularis':{"origin":"견갑골 견갑하와","insertion":"상완골 소결절","action":"어깨관절 안쪽돌림과 상완골두 안정화","originBones":["scapula"],"insertionBones":["humerus"],"yoga":"팔을 머리 위로 올릴 때 안쪽돌림과 견갑골 상방회전을 구분해 관찰합니다."},
@@ -40,7 +64,19 @@ const DATA:Record<string,MuscleAttachment>={
  'acromial part of deltoid':{origin:'견봉',insertion:'상완골 삼각근조면',action:'어깨관절 벌림',originBones:['scapula'],insertionBones:['humerus'],sites:[{kind:'origin',label:'견봉 가쪽 가장자리',bone:'견갑골',status:'text-verified'},{kind:'insertion',label:'상완골 삼각근조면',bone:'상완골',status:'text-verified'}]},
  'spinal part of deltoid':{origin:'견갑극',insertion:'상완골 삼각근조면',action:'어깨관절 신전·가쪽돌림 및 수평벌림에 기여',originBones:['scapula'],insertionBones:['humerus'],sites:[{kind:'origin',label:'견갑극 아래쪽 능선',bone:'견갑골',status:'text-verified'},{kind:'insertion',label:'상완골 삼각근조면',bone:'상완골',status:'text-verified'}]},
 };
+/** Normalize bilateral and named-part labels used in the actual BodyParts3D catalogue. */
+export function normalizeMuscleName(name:string):string{
+ return name.toLowerCase().trim()
+  .replace(/^(left|right) /,'')
+  .replace(/\\b(left|right)\\b /g,'')
+  .replace(/ of (left|right) /g,' of ')
+  .replace(/\\s+/g,' ').trim();
+}
 export function getMuscleAttachment(name:string):MuscleAttachment|null{
- const key=name.toLowerCase().trim().replace(/^(left|right) /,'').replace(/\b(left|right)\b /,'').replace(/^(.+?) of (left|right) (.+)$/,'$1 of $3');
- return DATA[key]??null;
+ const key=normalizeMuscleName(name);
+ const exact=DATA[key];
+ if(exact)return exact;
+ // Parts whose attachment sites differ must be authored individually.
+ // Do not substitute whole-muscle data for named heads/parts.
+ return null;
 }
