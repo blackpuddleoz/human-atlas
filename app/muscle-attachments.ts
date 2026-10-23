@@ -106,7 +106,7 @@ const DATA:Record<string,MuscleAttachment>={
  'extensor hallucis brevis':{"origin":"종골 위가쪽면","insertion":"엄지발가락 몸쪽마디뼈 등쪽 바닥","action":"엄지발가락 폄","originBones":["calcaneus"],"insertionBones":["proximal phalanx of big toe"]},
  'flexor hallucis longus':{"origin":"비골 뒤면 아래쪽","insertion":"엄지발가락 끝마디뼈 바닥면","action":"엄지발가락 굽힘·발목 발바닥굽힘 보조","originBones":["fibula"],"insertionBones":["distal phalanx of big toe"]},
  'flexor digitorum brevis':{"origin":"종골 안쪽돌기·발바닥널힘줄","insertion":"둘째~다섯째 발가락 중간마디뼈","action":"발가락 몸쪽·중간 관절 굽힘","originBones":["calcaneus"],"insertionBones":["middle phalanx"]},
- 'flexor accessorius':{"origin":"종골 안쪽·가쪽면","insertion":"긴발가락굽힘근 힘줄","action":"긴발가락굽힘근의 당김 방향 보정","originBones":["calcaneus"],"insertionBones":["tibia"]},
+ 'flexor accessorius':{"origin":"종골 안쪽·가쪽면","insertion":"긴발가락굽힘근 힘줄","action":"긴발가락굽힘근의 당김 방향 보정","originBones":["calcaneus"],"insertionBones":[]},
  'abductor digiti minimi of foot':{"origin":"종골돌기·발바닥널힘줄","insertion":"새끼발가락 몸쪽마디뼈 가쪽 바닥","action":"새끼발가락 벌림·굽힘","originBones":["calcaneus"],"insertionBones":["proximal phalanx of little toe"]},
  'flexor digiti minimi brevis of foot':{"origin":"제5중족골 바닥","insertion":"새끼발가락 몸쪽마디뼈 바닥","action":"새끼발가락 굽힘","originBones":["fifth metatarsal"],"insertionBones":["proximal phalanx of little toe"]},
  'lateral head of flexor hallucis brevis':{"origin":"입방골·가쪽쐐기뼈의 발바닥면","insertion":"엄지발가락 몸쪽마디뼈 바닥 가쪽 종자뼈 경유","action":"엄지발가락 굽힘","originBones":["cuboid","cuneiform"],"insertionBones":["proximal phalanx of big toe"]},
@@ -122,7 +122,7 @@ const DATA:Record<string,MuscleAttachment>={
  'external intercostal muscle':{"origin":"위쪽 늑골 아래모서리","insertion":"아래쪽 늑골 위모서리","action":"늑골 거상·흡기 보조","originBones":["rib"],"insertionBones":["rib"],note:"갈비뼈 사이를 연결하는 근육군으로 흉곽 움직임과 호흡에 관여합니다. 흉추만 따로 움직이는 것이 아니라 늑골과 흉곽 전체가 함께 변한다는 점을 설명할 때 참고합니다.",sourceUrl:"https://app.notion.com/p/3db56328112a81e18421cb67b7e59f8f"},
  'internal intercostal muscle':{"origin":"위쪽 늑골 아래모서리 안쪽","insertion":"아래쪽 늑골 위모서리","action":"흉곽 안정화·부분에 따라 강제 호기 보조","originBones":["rib"],"insertionBones":["rib"],note:"갈비뼈 사이를 연결하는 근육군으로 흉곽 움직임과 호흡에 관여합니다. 흉추만 따로 움직이는 것이 아니라 늑골과 흉곽 전체가 함께 변한다는 점을 설명할 때 참고합니다.",sourceUrl:"https://app.notion.com/p/3db56328112a81e18421cb67b7e59f8f"},
  'innermost intercostal muscle':{"origin":"위쪽 늑골 안쪽면","insertion":"아래쪽 늑골 안쪽면","action":"늑간 안정화·강제 호기 보조","originBones":["rib"],"insertionBones":["rib"],note:"갈비뼈 사이를 연결하는 근육군으로 흉곽 움직임과 호흡에 관여합니다. 흉추만 따로 움직이는 것이 아니라 늑골과 흉곽 전체가 함께 변한다는 점을 설명할 때 참고합니다.",sourceUrl:"https://app.notion.com/p/3db56328112a81e18421cb67b7e59f8f"},
- 'diaphragm':{"origin":"검상돌기·아래쪽 늑골/늑연골·상부 요추의 다리","insertion":"중심힘줄","action":"주요 들숨근; 수축 시 횡격막 하강·흉강 용적 증가","originBones":["sternum","rib","lumbar vertebra"],"insertionBones":["sternum","rib","lumbar vertebra"],note:"흉곽과 복강의 경계를 이루는 주된 호흡근입니다. 척추 움직임의 주동근으로 외우기보다, 흉곽의 360° 확장과 호흡이 몸통 움직임에 어떤 배경을 만드는지 연결합니다.",sourceUrl:"https://app.notion.com/p/3db56328112a81e5a602f2116490fbe3"},
+ 'diaphragm':{"origin":"검상돌기·아래쪽 늑골/늑연골·상부 요추의 다리","insertion":"중심힘줄","action":"주요 들숨근; 수축 시 횡격막 하강·흉강 용적 증가","originBones":["sternum","rib","lumbar vertebra"],"insertionBones":[],note:"흉곽과 복강의 경계를 이루는 주된 호흡근입니다. 척추 움직임의 주동근으로 외우기보다, 흉곽의 360° 확장과 호흡이 몸통 움직임에 어떤 배경을 만드는지 연결합니다.",sourceUrl:"https://app.notion.com/p/3db56328112a81e5a602f2116490fbe3"},
  'coracobrachialis':{"origin":"견갑골 오훼돌기","insertion":"상완골 몸통 안쪽면 중간부","action":"어깨 굴곡·모음 및 관절 안정화","originBones":["scapula"],"insertionBones":["humerus"],note:"기시부와 정지부의 이름을 따서 붙인 이름이다.",sourceUrl:"https://app.notion.com/p/3d956328112a81ada934da53a9d6322c"},
  'anconeus':{"origin":"상완골 가쪽위관절융기","insertion":"척골 주두 가쪽·몸쪽 뒤면","action":"팔꿈치 폄 보조·안정화","originBones":["humerus"],"insertionBones":["ulna"],note:"이 페이지에는 별도의 마지막 부연 설명이 없다. 촉지: 외측상과와 주두 사이, 전완 상부 후외측면.",sourceUrl:"https://app.notion.com/p/3d956328112a81caab55efadffc942c5"},
  'pronator quadratus':{"origin":"척골 아래쪽 앞면","insertion":"요골 아래쪽 앞면","action":"전완 엎침·원위 요척관절 안정화","originBones":["ulna"],"insertionBones":["radius"],note:"저항 유무에 관계없이 회내의 전 범위에 걸쳐 작용한다.",sourceUrl:"https://app.notion.com/p/3d956328112a8173b26de35d8460ce69"},
@@ -232,10 +232,27 @@ export function normalizeMuscleName(name:string):string{
   .replace(/ of (left|right) /g,' of ')
   .replace(/\s+/g,' ').trim();
 }
+/** Teaching context follows the TTC principle: movement → length → force → control.
+ * Direct Notion excerpts are kept as curated note entries; otherwise this
+ * gives a clearly generalized, anatomy-informed explanation. */
+function functionalTeachingContext(key:string, muscle:MuscleAttachment):string{
+ let context='관절 각도와 외부 부하가 바뀌면 같은 근육도 움직임을 만들거나 억제하는 역할이 달라질 수 있습니다.';
+ if(/papillary muscle of ventricle/.test(key))context='심장 유두근은 뼈에 붙어 관절을 움직이는 골격근이 아닙니다. 심실 수축 중 건삭 장력을 유지하는 기능을 이해합니다.';
+ else if(/oblique|rectus|palpebrae/.test(key)&&/(inferior|superior|lateral|medial|levator)/.test(key)&&!/(abdominis|capitis)/.test(key))context='안구 및 눈꺼풀 근육은 관절의 큰 움직임보다 눈의 방향과 시야 조절을 담당합니다. 일반적인 요가 동작 분석과 구분해 공부합니다.';
+ else if(/crico|arytenoid|vocalis|palatini|uvular|hyo|glossus|tongue/.test(key))context='발성·삼킴·혀 또는 후두의 미세한 움직임에 관여합니다. 뼈에 붙지 않는 연부조직 부착점도 구분합니다.';
+ else if(/perineal|coccygeus|pubo|iliococcygeus|sphincter/.test(key))context='골반바닥과 회음부의 지지·괄약 기능을 이해합니다. 겉으로 보이는 아사나 형상만으로 이 근육의 수축 여부를 판단하지 않습니다.';
+ else if(/lumbar|thorac|cervic|spinal|rotator|interspinal|splenius|longissimus|iliocostalis/.test(key))context='척추에서는 전체 몸통의 움직임과 개별 분절의 안정화를 구분합니다. 굴곡·신전·회전 시 인접 부위의 보상 움직임을 함께 관찰합니다.';
+ else if(/intercost|costarum|diaphragm/.test(key))context='흉곽과 호흡의 관계를 살펴보되, 호흡의 크기만으로 특정 근육의 기능을 단정하지 않습니다.';
+ else if(/lumbrical|interosse|pollicis|digiti|minimi|carpi|pronator|supinator|anconeus/.test(key))context='손과 전완의 작은 관절 움직임을 구분하고, 바닥 지지 시 손목·손가락·팔꿈치에 걸리는 부하를 함께 관찰합니다.';
+ else if(/halluc|plantar|fibularis|tibialis|soleus|gastrocnemius|foot/.test(key))context='발목과 발가락 움직임은 서로 구분합니다. 체중부하 자세에서는 발의 지지와 발목 가동범위가 어떻게 연결되는지 관찰합니다.';
+ else if(/femoris|adductor|gluteus|iliacus|piriformis|obturator|pectineus|sartorius|hamstring/.test(key))context='고관절과 무릎의 실제 움직임을 먼저 본 뒤, 근육 길이의 한계·능동적인 힘·끝 범위 조절 및 관절 구조를 구분해 분석합니다.';
+ else if(/deltoid|trapezius|scapula|pectoralis|rhomboid|serratus|teres|subscapularis|supraspinatus|infraspinatus/.test(key))context='견갑골의 움직임과 상완골의 움직임은 구분합니다. 팔을 머리 위로 올릴 때 가동범위뿐 아니라 부하에서의 조절도 살펴봅니다.';
+ return '주요 작용: '+muscle.action+'. '+context;
+}
 export function getMuscleAttachment(name:string):MuscleAttachment|null{
  const key=normalizeMuscleName(name);
  const exact=DATA[key];
- if(exact)return exact;
+ if(exact)return exact.note?exact:{...exact,note:functionalTeachingContext(key,exact)};
  // Parts whose attachment sites differ must be authored individually.
  // Do not substitute whole-muscle data for named heads/parts.
  return null;
