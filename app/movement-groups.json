@@ -290,5 +290,189 @@
       }
     ],
     "notionUrl": "https://app.notion.com/p/3d956328112a8176b7d5eec832c8e279"
+  },
+  {
+    "category": "upper",
+    "title": "견관절 내전근",
+    "movement": "벌린 팔을 몸통 쪽으로 모으는 움직임.",
+    "members": [
+      {
+        "name": "대흉근",
+        "label": "대흉근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a817ba075f081e707937a"
+      },
+      {
+        "name": "오훼완근",
+        "label": "오훼완근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81ada934da53a9d6322c"
+      },
+      {
+        "name": "광배근",
+        "label": "광배근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a815fa7eee04c1973a63b"
+      },
+      {
+        "name": "대원근",
+        "label": "대원근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8140affce15cdc6ce48c"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81c9b55bf527404617c1"
+  },
+  {
+    "category": "upper",
+    "title": "견관절 수평외전근",
+    "movement": "들어 올린 팔을 수평으로 뒤쪽에 벌리는 움직임.",
+    "members": [
+      {
+        "name": "삼각근",
+        "label": "— 후부",
+        "qualifier": "후부",
+        "notionUrl": "https://app.notion.com/p/3d956328112a811f8ca6cbef681b0fea"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81ae9581e93933d00133"
+  },
+  {
+    "category": "upper",
+    "title": "견관절 수평내전근",
+    "movement": "들어 올린 팔을 수평으로 가슴 앞으로 모으는 움직임.",
+    "members": [
+      {
+        "name": "삼각근",
+        "label": "— 전부",
+        "qualifier": "전부",
+        "notionUrl": "https://app.notion.com/p/3d956328112a811f8ca6cbef681b0fea"
+      },
+      {
+        "name": "대흉근",
+        "label": "대흉근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a817ba075f081e707937a"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81af887ee05291e5e869"
+  },
+  {
+    "category": "upper",
+    "title": "주관절 굴곡근",
+    "movement": "팔꿈치를 굽히는 움직임.",
+    "members": [
+      {
+        "name": "상완이두근",
+        "label": "상완이두근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8184b952eb10ff2814f5"
+      },
+      {
+        "name": "상완근",
+        "label": "상완근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81b5af27f655a04a5dab"
+      },
+      {
+        "name": "상완요골근",
+        "label": "상완요골근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81c88a79ff20d16a0aed"
+      },
+      {
+        "name": "원회내근",
+        "label": "— 보조",
+        "qualifier": "보조",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81a497f9d9414fa0c9d3"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a816da2cefe4ad794b3f1"
+  },
+  {
+    "category": "upper",
+    "title": "주관절 신전근",
+    "movement": "팔꿈치를 펴는 움직임.",
+    "members": [
+      {
+        "name": "상완삼두근",
+        "label": "상완삼두근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81eababad88b5e0508dc"
+      },
+      {
+        "name": "주근",
+        "label": "주근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81caab55efadffc942c5"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a8129ab0ce4ce4e68a877"
+  },
+  {
+    "category": "upper",
+    "title": "전완 회외근",
+    "movement": "전완을 뒤쳐 손바닥이 앞 또는 위를 향하게 하는 움직임.",
+    "members": [
+      {
+        "name": "상완이두근",
+        "label": "상완이두근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8184b952eb10ff2814f5"
+      },
+      {
+        "name": "회외근",
+        "label": "회외근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81d1892affb6a6ed97ab"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a8132b460d0cdc8e5d657"
+  },
+  {
+    "category": "upper",
+    "title": "전완 회내근",
+    "movement": "전완을 엎쳐 손바닥이 뒤 또는 아래를 향하게 하는 움직임.",
+    "members": [
+      {
+        "name": "원회내근",
+        "label": "원회내근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81a497f9d9414fa0c9d3"
+      },
+      {
+        "name": "방형회내근",
+        "label": "방형회내근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8173b26de35d8460ce69"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81eb8aa0da666b66c631"
+  },
+  {
+    "category": "upper",
+    "title": "수근관절 굴곡근",
+    "movement": "손목을 손바닥 쪽으로 굽히는 움직임.",
+    "members": [
+      {
+        "name": "요측수근굴근",
+        "label": "요측수근굴근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81c0bc4bd0eb97e452f1"
+      },
+      {
+        "name": "척측수근굴근",
+        "label": "척측수근굴근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81478c24e624618db89b"
+      },
+      {
+        "name": "장장근",
+        "label": "장장근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8182a2a6e84a0e7095a2"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81e999c9ca816b0c5ed7"
   }
 ]
