@@ -1,0 +1,294 @@
+[
+  {
+    "category": "upper",
+    "title": "견갑골 상방회전근",
+    "movement": "견갑골 하각이 바깥쪽·위쪽으로 이동하면서 관절와가 더 위쪽을 향하도록 회전하는 움직임에 관여합니다.",
+    "members": [
+      {
+        "name": "승모근",
+        "label": "상부·하부 승모근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8135aef9d83b47f63e69"
+      },
+      {
+        "name": "전거근",
+        "label": "전거근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81a5b5b3d972b48ebfa5"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81b9b627f8676329df8a"
+  },
+  {
+    "category": "upper",
+    "title": "견갑골 거상근",
+    "movement": "견갑골 전체가 흉곽 위에서 위쪽으로 이동하는 움직임에 관여합니다.",
+    "members": [
+      {
+        "name": "승모근",
+        "label": "상부 승모근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8135aef9d83b47f63e69"
+      },
+      {
+        "name": "견갑거근",
+        "label": "견갑거근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81dc9f77cdb23b257d6b"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81eba977edf15b166d0e"
+  },
+  {
+    "category": "upper",
+    "title": "견갑골 하강근",
+    "movement": "견갑골 전체가 흉곽 위에서 아래쪽으로 이동하는 움직임에 관여합니다.",
+    "members": [
+      {
+        "name": "소흉근",
+        "label": "소흉근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8187a59dd0628713ef67"
+      },
+      {
+        "name": "승모근",
+        "label": "하부 승모근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8135aef9d83b47f63e69"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a8139950aca7b2c9d8779"
+  },
+  {
+    "category": "upper",
+    "title": "견갑골 전인근",
+    "movement": "견갑골이 흉곽을 따라 바깥쪽·앞쪽으로 이동하는 움직임에 관여합니다.",
+    "members": [
+      {
+        "name": "소흉근",
+        "label": "소흉근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8187a59dd0628713ef67"
+      },
+      {
+        "name": "전거근",
+        "label": "전거근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81a5b5b3d972b48ebfa5"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a8198a7d3f1654fb4c471"
+  },
+  {
+    "category": "upper",
+    "title": "견갑골 후인근",
+    "movement": "견갑골이 흉곽을 따라 척추 쪽으로 이동하는 움직임에 관여합니다.",
+    "members": [
+      {
+        "name": "승모근",
+        "label": "중부 승모근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8135aef9d83b47f63e69"
+      },
+      {
+        "name": "능형근",
+        "label": "능형근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a811eb43cca3d51933d91"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a8192b1d7e2b621a1d4f6"
+  },
+  {
+    "category": "upper",
+    "title": "견갑골 하방회전근",
+    "movement": "견갑골의 하각이 안쪽·아래쪽으로 이동하는 회전 방향에 관여합니다.",
+    "members": [
+      {
+        "name": "견갑거근",
+        "label": "견갑거근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81dc9f77cdb23b257d6b"
+      },
+      {
+        "name": "능형근",
+        "label": "능형근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a811eb43cca3d51933d91"
+      },
+      {
+        "name": "소흉근",
+        "label": "소흉근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8187a59dd0628713ef67"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81cb939df3bb66a43575"
+  },
+  {
+    "category": "upper",
+    "title": "견관절 내회전근",
+    "movement": "상완골이 안쪽으로 돌아가는 움직임.",
+    "members": [
+      {
+        "name": "삼각근",
+        "label": "— 전부",
+        "qualifier": "전부",
+        "notionUrl": "https://app.notion.com/p/3d956328112a811f8ca6cbef681b0fea"
+      },
+      {
+        "name": "대흉근",
+        "label": "대흉근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a817ba075f081e707937a"
+      },
+      {
+        "name": "견갑하근",
+        "label": "견갑하근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81be9ca8fa54f06d7556"
+      },
+      {
+        "name": "대원근",
+        "label": "대원근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8140affce15cdc6ce48c"
+      },
+      {
+        "name": "광배근",
+        "label": "광배근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a815fa7eee04c1973a63b"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81cc9bedc26a66d1106d"
+  },
+  {
+    "category": "upper",
+    "title": "견관절 외회전근",
+    "movement": "상완골이 바깥쪽으로 돌아가는 움직임.",
+    "members": [
+      {
+        "name": "극하근",
+        "label": "극하근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8176be86ddb970f5c2ba"
+      },
+      {
+        "name": "소원근",
+        "label": "소원근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81a2a3b8cf4f47d5cce9"
+      },
+      {
+        "name": "삼각근",
+        "label": "— 후부",
+        "qualifier": "후부",
+        "notionUrl": "https://app.notion.com/p/3d956328112a811f8ca6cbef681b0fea"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81289d31c3718457eafd"
+  },
+  {
+    "category": "upper",
+    "title": "견관절 굴곡근",
+    "movement": "팔을 몸 앞쪽으로 들어 올리는 움직임.",
+    "members": [
+      {
+        "name": "삼각근",
+        "label": "— 전부",
+        "qualifier": "전부",
+        "notionUrl": "https://app.notion.com/p/3d956328112a811f8ca6cbef681b0fea"
+      },
+      {
+        "name": "대흉근",
+        "label": "— 쇄골두",
+        "qualifier": "쇄골두",
+        "notionUrl": "https://app.notion.com/p/3d956328112a817ba075f081e707937a"
+      },
+      {
+        "name": "오훼완근",
+        "label": "오훼완근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81ada934da53a9d6322c"
+      },
+      {
+        "name": "상완이두근",
+        "label": "— 단두",
+        "qualifier": "단두",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8184b952eb10ff2814f5"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a8110a352f673c4bc409a"
+  },
+  {
+    "category": "upper",
+    "title": "견관절 신전근",
+    "movement": "팔을 뒤로 보내거나 굴곡한 팔을 내리는 움직임. 교재 도판의 근육 목록이며, 대흉근 흉골두의 작용은 팔의 시작 위치와 함께 읽는다.",
+    "members": [
+      {
+        "name": "광배근",
+        "label": "광배근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a815fa7eee04c1973a63b"
+      },
+      {
+        "name": "대원근",
+        "label": "대원근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8140affce15cdc6ce48c"
+      },
+      {
+        "name": "삼각근",
+        "label": "— 후부",
+        "qualifier": "후부",
+        "notionUrl": "https://app.notion.com/p/3d956328112a811f8ca6cbef681b0fea"
+      },
+      {
+        "name": "극하근",
+        "label": "극하근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8176be86ddb970f5c2ba"
+      },
+      {
+        "name": "소원근",
+        "label": "소원근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81a2a3b8cf4f47d5cce9"
+      },
+      {
+        "name": "상완삼두근",
+        "label": "— 장두",
+        "qualifier": "장두",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81eababad88b5e0508dc"
+      },
+      {
+        "name": "대흉근",
+        "label": "— 흉골두",
+        "qualifier": "흉골두",
+        "notionUrl": "https://app.notion.com/p/3d956328112a817ba075f081e707937a"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81729560cd13ea263d2e"
+  },
+  {
+    "category": "upper",
+    "title": "견관절 외전근",
+    "movement": "팔을 몸통에서 옆으로 벌리는 움직임.",
+    "members": [
+      {
+        "name": "극상근",
+        "label": "극상근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81728e7bf65694e58efa"
+      },
+      {
+        "name": "삼각근",
+        "label": "— 중부",
+        "qualifier": "중부",
+        "notionUrl": "https://app.notion.com/p/3d956328112a811f8ca6cbef681b0fea"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a8176b7d5eec832c8e279"
+  }
+]
