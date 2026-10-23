@@ -712,5 +712,183 @@
       }
     ],
     "notionUrl": "https://app.notion.com/p/3d956328112a818e97b7ffe7a3875961"
+  },
+  {
+    "category": "lower",
+    "title": "고관절 굴곡근",
+    "movement": "대퇴와 몸통 앞쪽 사이의 각도를 줄이는 움직임에 관여합니다.",
+    "members": [
+      {
+        "name": "장요근",
+        "label": "— 장요근",
+        "qualifier": "장요근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a812bb928f8ee13d44444"
+      },
+      {
+        "name": "대퇴직근",
+        "label": "— 대퇴직근",
+        "qualifier": "대퇴직근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81ca816dcb8ecb82ab7f"
+      },
+      {
+        "name": "대퇴근막장근",
+        "label": "— 대퇴근막장근",
+        "qualifier": "대퇴근막장근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a813ca3def28a929a950b"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a812c96f5d3d933d528ed"
+  },
+  {
+    "category": "lower",
+    "title": "고관절 신전근",
+    "movement": "대퇴가 몸통 뒤쪽으로 이동하거나 골반이 대퇴에 대해 뒤로 열리는 움직임에 관여합니다.",
+    "members": [
+      {
+        "name": "대둔근",
+        "label": "— 대둔근",
+        "qualifier": "대둔근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a818398adc05d9e361bf0"
+      },
+      {
+        "name": "햄스트링",
+        "label": "— 햄스트링",
+        "qualifier": "햄스트링",
+        "notionUrl": "https://app.notion.com/p/3db56328112a8136a291f28f43c68dfa"
+      },
+      {
+        "name": "대내전근",
+        "label": "— 대내전근 후방부",
+        "qualifier": "대내전근 후방부",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81ee8ec4f934d45c982d"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a8124ae71d90da3d30ac3"
+  },
+  {
+    "category": "lower",
+    "title": "고관절 외전근",
+    "movement": "대퇴를 정중선에서 멀어지게 하며 한 발 지지에서는 골반 조절에 관여합니다.",
+    "members": [
+      {
+        "name": "중둔근",
+        "label": "— 중둔근",
+        "qualifier": "중둔근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81e3b55fde0944d6acb4"
+      },
+      {
+        "name": "소둔근",
+        "label": "— 소둔근",
+        "qualifier": "소둔근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a8116859ee9f2cce84226"
+      },
+      {
+        "name": "대퇴근막장근",
+        "label": "— 대퇴근막장근",
+        "qualifier": "대퇴근막장근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a813ca3def28a929a950b"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a81459e85c45129878c87"
+  },
+  {
+    "category": "lower",
+    "title": "고관절 내전근",
+    "movement": "대퇴를 정중선 쪽으로 가져오는 움직임에 관여합니다.",
+    "members": [
+      {
+        "name": "대내전근",
+        "label": "— 대내전근",
+        "qualifier": "대내전근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81ee8ec4f934d45c982d"
+      },
+      {
+        "name": "장내전근·단내전근·박근·치골근은 세부 근육으로 함께 봅니다.",
+        "label": "장내전근·단내전근·박근·치골근은 세부 근육으로 함께 봅니다.",
+        "qualifier": "",
+        "notionUrl": ""
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a81e293c6cc7c44865a82"
+  },
+  {
+    "category": "lower",
+    "title": "고관절 외회전근",
+    "movement": "대퇴골이 장축을 중심으로 바깥쪽으로 회전하는 움직임에 관여합니다.",
+    "members": [
+      {
+        "name": "깊은 외회전근군",
+        "label": "— 깊은 외회전근군",
+        "qualifier": "깊은 외회전근군",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81b192d8c46580040b36"
+      },
+      {
+        "name": "대둔근",
+        "label": "— 대둔근 일부",
+        "qualifier": "대둔근 일부",
+        "notionUrl": "https://app.notion.com/p/3db56328112a818398adc05d9e361bf0"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a81d78e94dce2d6775fe4"
+  },
+  {
+    "category": "lower",
+    "title": "고관절 내회전근",
+    "movement": "대퇴골이 장축을 중심으로 안쪽으로 회전하는 움직임에 관여합니다.",
+    "members": [
+      {
+        "name": "중둔근",
+        "label": "— 중둔근 앞섬유",
+        "qualifier": "중둔근 앞섬유",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81e3b55fde0944d6acb4"
+      },
+      {
+        "name": "소둔근",
+        "label": "— 소둔근",
+        "qualifier": "소둔근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a8116859ee9f2cce84226"
+      },
+      {
+        "name": "대퇴근막장근",
+        "label": "— 대퇴근막장근",
+        "qualifier": "대퇴근막장근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a813ca3def28a929a950b"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a812ba977df949fd9170f"
+  },
+  {
+    "category": "lower",
+    "title": "무릎 굴곡근",
+    "movement": "대퇴골과 경골 사이의 각도를 줄이는 무릎 굴곡에 관여합니다.",
+    "members": [
+      {
+        "name": "햄스트링",
+        "label": "— 햄스트링",
+        "qualifier": "햄스트링",
+        "notionUrl": "https://app.notion.com/p/3db56328112a8136a291f28f43c68dfa"
+      },
+      {
+        "name": "비복근",
+        "label": "— 비복근",
+        "qualifier": "비복근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81e28261fd8e4e85bd9a"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a8170889dfac820eda4fb"
+  },
+  {
+    "category": "lower",
+    "title": "무릎 신전근",
+    "movement": "굽혀진 무릎을 펴는 움직임에 관여합니다.",
+    "members": [
+      {
+        "name": "대퇴사두근",
+        "label": "— 대퇴사두근",
+        "qualifier": "대퇴사두근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81f39cf4ff974ffba5cc"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a8131ae5bf9184839a6da"
   }
 ]
