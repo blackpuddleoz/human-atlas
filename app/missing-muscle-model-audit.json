@@ -1,0 +1,117 @@
+{
+  "generated": "2026-10-23",
+  "sourceModel": "BodyParts3D atlas (current app)",
+  "candidateModel": "Écorché, BodyParts3D + Z-Anatomy",
+  "candidateRepository": "https://github.com/Charleeh/ecorche",
+  "candidateLicense": "CC BY-SA 4.0 (attribution and share-alike required for adapted model assets)",
+  "status": "geometry located upstream; not yet imported or aligned to the current viewer",
+  "movementGroups": 43,
+  "uniqueCurriculumMemberLabels": 71,
+  "currentMuscularMeshes": 402,
+  "candidateSupplementalMuscleMeshes": 362,
+  "confirmedMissingCandidates": [
+    {
+      "korean": "광배근",
+      "english": "latissimus dorsi",
+      "currentModelMatches": 0,
+      "upstreamMeshes": [
+        "Left latissimus dorsi",
+        "Right latissimus dorsi"
+      ]
+    },
+    {
+      "korean": "복직근",
+      "english": "rectus abdominis",
+      "currentModelMatches": 0,
+      "upstreamMeshes": [
+        "Left rectus abdominis",
+        "Right rectus abdominis"
+      ]
+    },
+    {
+      "korean": "내복사근",
+      "english": "internal oblique",
+      "currentModelMatches": 0,
+      "upstreamMeshes": [
+        "Left internal oblique",
+        "Right internal oblique"
+      ]
+    },
+    {
+      "korean": "요방형근",
+      "english": "quadratus lumborum",
+      "currentModelMatches": 0,
+      "upstreamMeshes": [
+        "Left quadratus lumborum",
+        "Right quadratus lumborum"
+      ]
+    },
+    {
+      "korean": "다열근",
+      "english": "multifidus",
+      "currentModelMatches": 0,
+      "upstreamMeshes": [
+        "Left multifidus cervicis",
+        "Left multifidus lumborum",
+        "Left multifidus thoracis",
+        "Right multifidus cervicis",
+        "Right multifidus lumborum",
+        "Right multifidus thoracis"
+      ]
+    },
+    {
+      "korean": "대퇴근막장근",
+      "english": "tensor fasciae latae",
+      "currentModelMatches": 0,
+      "upstreamMeshes": [
+        "Left tensor fasciae latae",
+        "Right tensor fasciae latae"
+      ]
+    },
+    {
+      "korean": "견갑거근",
+      "english": "levator scapulae",
+      "currentModelMatches": 0,
+      "upstreamMeshes": [
+        "Left levator scapulae",
+        "Right levator scapulae"
+      ]
+    },
+    {
+      "korean": "견갑하근",
+      "english": "subscapularis",
+      "currentModelMatches": 0,
+      "upstreamMeshes": [
+        "Left subscapularis",
+        "Right subscapularis"
+      ]
+    },
+    {
+      "korean": "전경골근",
+      "english": "tibialis anterior",
+      "currentModelMatches": 0,
+      "upstreamMeshes": [
+        "Left tibialis anterior",
+        "Right tibialis anterior"
+      ]
+    },
+    {
+      "korean": "후경골근",
+      "english": "tibialis posterior",
+      "currentModelMatches": 0,
+      "upstreamMeshes": [
+        "Left tibialis posterior",
+        "Right tibialis posterior"
+      ]
+    },
+    {
+      "korean": "장비골근",
+      "english": "fibularis longus",
+      "currentModelMatches": 0,
+      "upstreamMeshes": [
+        "Left fibularis longus",
+        "Right fibularis longus"
+      ]
+    }
+  ]
+}
