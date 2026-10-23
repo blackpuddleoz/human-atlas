@@ -1,5 +1,7 @@
 import {getKoreanName} from './korean-anatomy';
 import {getValidatedLandmarks} from './attachment-landmarks';
+import {SUPPLEMENTAL_IDS,SUPPLEMENTAL_SOURCE,SUPPLEMENTAL_FALLBACK} from './supplemental-muscles';
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 import {useEffect,useRef} from 'react';
 import * as T from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
@@ -82,6 +84,59 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
    };materials.push(m);return m;
   };
   const mats=new Map(SYSTEMS.map(s=>[s.id,materialFor(s.id)]));
+  // Additional CC BY-SA 4.0 Écorché muscles are registered as virtual atlas parts.
+  // Keep the native BodyParts3D meshes untouched, using shared bone centroids
+  // to estimate a uniform scale and translation for the supplemental shapes.
+  const supplemental=new Map<string,{mesh:T.Mesh;index:number}>(),supplementRoot=new T.Group();
+  scene.add(supplementRoot);
+  let supplementalScale=1;
+  const installSupplement=async()=>{
+   if(!atlas.parts.some(p=>p.chunk===-1))return;
+   const loader=new GLTFLoader();
+   let gltf;
+   try{gltf=await loader.loadAsync(SUPPLEMENTAL_SOURCE);}catch{
+    try{gltf=await loader.loadAsync(SUPPLEMENTAL_FALLBACK);}catch(e){console.warn('Supplemental anatomy model was not available',e);return;}
+   }
+   if(disposed)return;
+   gltf.scene.updateMatrixWorld(true);
+   const allMeshes:T.Mesh[]=[];
+   gltf.scene.traverse(o=>{if(o instanceof T.Mesh)allMeshes.push(o);});
+   const centersOriginal:T.Vector3[]=[],centersSource:T.Vector3[]=[];
+   for(const boneName of ['Left femur','Right femur','Body of sternum','Left humerus','Right humerus']){
+    const p=atlas.parts.find(p=>p.chunk>=0&&p.name.toLowerCase()===boneName.toLowerCase());
+    const m=allMeshes.find(m=>(m.userData.name??m.name).toLowerCase()===boneName.toLowerCase());
+    if(p&&m){centersOriginal.push(new T.Vector3().fromArray(p.bounds[0]).add(new T.Vector3().fromArray(p.bounds[1])).multiplyScalar(.5));centersSource.push(new T.Box3().setFromObject(m).getCenter(new T.Vector3()));}
+   }
+   const mean=(vs:T.Vector3[])=>vs.reduce((sum,v)=>sum.add(v),new T.Vector3()).multiplyScalar(1/Math.max(1,vs.length));
+   if(centersOriginal.length>=2){
+    const srcMean=mean(centersSource),dstMean=mean(centersOriginal);
+    let numerator=0,denominator=0;
+    for(let i=0;i<centersSource.length;i++){numerator+=centersSource[i].clone().sub(srcMean).dot(centersOriginal[i].clone().sub(dstMean));denominator+=centersSource[i].distanceToSquared(srcMean);}
+    const fitted=denominator>1e-10?numerator/denominator:1;
+    supplementalScale=fitted>0.7&&fitted<1.3?fitted:1;
+    supplementRoot.scale.setScalar(supplementalScale);
+    supplementRoot.position.copy(dstMean).addScaledVector(srcMean,-supplementalScale);
+   }
+   for(const sourceMesh of allMeshes){
+    const name=String(sourceMesh.userData.name??sourceMesh.name),id=SUPPLEMENTAL_IDS.get(name.toLowerCase());
+    if(!id)continue;
+    const index=atlas.parts.findIndex(p=>p.id===id);
+    if(index<0)continue;
+    const geometry=sourceMesh.geometry.clone();geometry.applyMatrix4(sourceMesh.matrixWorld);geometry.computeBoundingBox();geometry.computeBoundingSphere();
+    const mesh=new T.Mesh(geometry,new T.MeshStandardMaterial({color:0x74b9bd,metalness:0.04,roughness:0.62,side:T.DoubleSide}));
+    mesh.userData.supplementId=id;mesh.visible=false;
+    supplementRoot.add(mesh);supplemental.set(id,{mesh,index});
+    const box=geometry.boundingBox!.clone().applyMatrix4(supplementRoot.matrixWorld);
+    // Matrix update is required because the root is scaled and translated.
+    supplementRoot.updateMatrixWorld(true);
+    box.copy(geometry.boundingBox!).applyMatrix4(supplementRoot.matrixWorld);
+    const p=atlas.parts[index];
+    p.bounds=[box.min.toArray(),box.max.toArray()];
+    bounds[index]=box;centers[index]=box.getCenter(new T.Vector3());
+   }
+   lastState=null;lastIsolate='';dirty=true;
+  };
+  void installSupplement();
   let loaded=0;
   const loadChunk=async(ci:number)=>{
    const chunk=atlas.chunks[ci],compressed=!!chunk.gzip&&typeof DecompressionStream!=='undefined';const response=await fetch(compressed?chunk.gzip!:chunk.url,{signal:abort.signal});const buffer=await decodeModelResponse(response,chunk.bytes,compressed);if(disposed)return;
@@ -115,6 +170,11 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
    const validTap=tap.up(e.pointerId,e.clientX,e.clientY);if(!validTap||!ready)return;const rect=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);
    let nearest=Infinity,found=-1;const hasSolid=atlas.parts.some((p,i)=>p.system!=='integumentary'&&data[i*4+3]>.5);
    pickers.forEach((mesh,i)=>{if(!mesh||data[i*4+3]<.5||(hasSolid&&atlas.parts[i].system==='integumentary'))return;worldBox.copy(bounds[i]).translate(mesh.position);if(!raycaster.ray.intersectBox(worldBox,hitPoint))return;const hits=raycaster.intersectObject(mesh,false);if(hits[0]&&hits[0].distance<nearest){nearest=hits[0].distance;found=i;}});
+   for(const entry of supplemental.values()){
+    if(!entry.mesh.visible)continue;
+    const hits=raycaster.intersectObject(entry.mesh,false);
+    if(hits[0]&&hits[0].distance<nearest){nearest=hits[0].distance;found=entry.index;}
+   }
    if(found<0&&amount>.45)found=findTarget(e.clientX-rect.left,e.clientY-rect.top,e.pointerType==='touch'?24:16);if(found>=0){hover.hidden=true;select.current(atlas.parts[found].id);}
   };
   renderer.domElement.addEventListener('pointerdown',down);renderer.domElement.addEventListener('pointermove',move);renderer.domElement.addEventListener('pointerup',up);renderer.domElement.addEventListener('pointercancel',cancel);
@@ -137,7 +197,15 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
      else {const t=(amount-.45)/.55,group=SYSTEMS.findIndex(sys=>sys.id===p.system),angle=group/SYSTEMS.length*Math.PI*2;dx=T.MathUtils.lerp(Math.sin(angle)*.48,destination.x-c.x,t);dy=T.MathUtils.lerp((c.y-.85)*.28,destination.y-c.y,t);dz=T.MathUtils.lerp(Math.cos(angle)*.48,-c.z,t);}
      const selected=selection.has(p.id);data.set([dx,dy,dz,(s.isolate?(p.system==='skeletal'||selected):visible.has(p.system)||selected)?1:0],i*4);selectedData[i*4]=selected?255:0;selectedData[i*4+1]=originBones.has(p.id)?255:0;selectedData[i*4+2]=insertionBones.has(p.id)?255:0;
      markerPositions.set(data[i*4+3]>.5?[c.x+dx,c.y+dy,c.z+dz]:[10000,10000,10000],i*3);const mesh=pickers[i];if(mesh){mesh.position.set(dx,dy,dz);mesh.updateMatrix();mesh.updateMatrixWorld(true);}
-    });partTexture.needsUpdate=true;selectionTexture.needsUpdate=true;markerGeometry.attributes.position.needsUpdate=true;lastState=s;lastExtent=amount;dirty=true;
+    });
+    for(const [id,entry] of supplemental){
+     const i=entry.index,mesh=entry.mesh;
+     mesh.visible=data[i*4+3]>.5;
+     mesh.position.set(data[i*4]/supplementalScale,data[i*4+1]/supplementalScale,data[i*4+2]/supplementalScale);
+     (mesh.material as T.MeshStandardMaterial).color.set(s.selected.includes(id)?0x43c2bb:0x83bab9);
+     mesh.updateMatrixWorld(true);
+    }
+    partTexture.needsUpdate=true;selectionTexture.needsUpdate=true;markerGeometry.attributes.position.needsUpdate=true;lastState=s;lastExtent=amount;dirty=true;
    }
    if(s.view!==lastView||s.reset!==lastReset){fit(s.view,amount);lastView=s.view;lastReset=s.reset;}
    if(moving&&!s.isolate)fit(amount>.5?'front':s.view,Math.max(0,(amount-.3)/.7));
