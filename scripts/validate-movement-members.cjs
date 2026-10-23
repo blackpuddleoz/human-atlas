@@ -27,6 +27,8 @@ for(const side of ['Left','Right']){
  const tfl=atlas.parts.find(p=>p.name===`${side} tensor fasciae latae`);
  const band=atlas.parts.find(p=>p.name===`${side} iliotibial tract`);
  assert.equal(tfl.system,'muscular');assert.equal(band.system,'connective');
+ assert.equal(original.parts.find(p=>p.id===band.id).system,'connective');
+ assert.equal(original.parts.find(p=>p.id===tfl.id).system,'muscular');
  assert.deepEqual(tfl.bounds,original.parts.find(p=>p.id===tfl.id).bounds);
  assert.ok(tfl.bounds[0][1]>band.bounds[0][1]);
  const member=groups.find(g=>g.title==='고관절 외전근').members.find(m=>m.name==='대퇴근막장근');

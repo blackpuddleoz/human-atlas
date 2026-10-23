@@ -97,6 +97,7 @@ const BONE_EXPLANATIONS: Array<[RegExp,string]> = [
  [/cartilage/i,'연골은 부위에 따라 관절면의 마찰을 줄이거나 구조를 지지하는 역할을 합니다. 이 구조가 인접한 뼈 및 연부조직과 어떻게 연결되는지 관찰합니다.'],
 ];
 function boneSummary(name:string):string|null{
+ if(/iliotibial tract/i.test(name))return '장경인대는 넙다리 가쪽의 두꺼운 근막 띠입니다. 대퇴근막장근·대둔근의 장력을 전달하는 결합조직입니다.';
  const normalized=name.replace(/\b(left|right)\b/gi,'').trim();
  return BONE_EXPLANATIONS.find(([pattern])=>pattern.test(normalized))?.[1]??null;
 }
