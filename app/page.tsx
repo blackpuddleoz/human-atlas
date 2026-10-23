@@ -11,32 +11,12 @@ import {Combobox,ComboboxInput,ComboboxContent,ComboboxList,ComboboxItem,Combobo
 import AnatomyScene from './scene';
 import movementGroups from './movement-groups.json';
 import {GROUP_ALIASES,MORE_GROUP_ALIASES} from './movement-aliases';
+import {normalizeMovementName,matchesMovementMember,movementMemberLabel} from './movement-members';
 import {withSupplementalMuscles} from './supplemental-muscles';
 import {getMuscleAttachment} from './muscle-attachments';
 import {getKoreanName, getKoreanSummary, getKoreanDescription, koreanSystemName, findAnatomyConcepts} from './korean-anatomy';
 import {DEFAULT_VISIBLE,SYSTEMS,EXPLANATIONS,explanation,type Atlas,type Concept,type SceneState,type SystemId,type View} from './anatomy';
 type MovementGroup=(typeof movementGroups)[number];
-const normalizeMovementName=(v:string)=>v.replace(/^(왼쪽|오른쪽|좌측|우측)\s*/,'').replace(/\s/g,'').replace(/근군$/,'근');
-function matchesMovementMember(english:string,korean:string,member:{name:string;label:string;qualifier?:string}):boolean{
- const target=normalizeMovementName(member.name);
- const ko=normalizeMovementName(korean);
- const en=english.toLowerCase().replace(/\b(left|right)\b/g,'').replace(/\s+/g,' ').trim();
- const aliases=GROUP_ALIASES[target]??MORE_GROUP_ALIASES[target]??[];
- const matching=aliases.some(a=>en.includes(a))||(target.length>=2&&ko.includes(target));
- if(!matching)return false;
- const qualifier=(member.qualifier||member.label||'').replace(/^[—\s]+/,'');
- if(/상부·하부/.test(qualifier))return !/transverse part|middle/.test(en);
- if(/상부|위섬유/.test(qualifier))return !/transverse part|ascending part|middle|lower/.test(en);
- if(/하부|아래섬유/.test(qualifier))return !/transverse part|descending part|middle|upper/.test(en);
- if(/중부|중간섬유/.test(qualifier))return !/ascending part|descending part|upper|lower/.test(en);
- if(/전부|앞섬유/.test(qualifier))return !/spinal part|posterior part|acromial part/.test(en);
- if(/후부|뒤섬유/.test(qualifier))return !/clavicular part|anterior part|acromial part/.test(en);
- if(/쇄골두/.test(qualifier))return !/sternocostal|abdominal part/.test(en);
- if(/흉골두/.test(qualifier))return !/clavicular|abdominal part/.test(en);
- if(/장두/.test(qualifier))return !/short head|lateral head|medial head/.test(en);
- if(/단두/.test(qualifier))return !/long head/.test(en);
- return true;
-}
 const initial:SceneState={explode:0,visible:DEFAULT_VISIBLE,selected:[],isolate:false,view:'three-quarter',rotate:false,reset:0};
 export default function Home(){
  const detailTitle=useRef<HTMLHeadingElement>(null);
@@ -87,11 +67,11 @@ export default function Home(){
    </div>
    <div style={{overflowY:'auto',minHeight:0,padding:'16px 20px 22px'}}>
     {activeMovement?<button type="button" onClick={()=>{setActiveMovement(null);setTextOnlyMember(null);setState(v=>({...v,selected:[],isolate:false}));}} style={{display:'inline-flex',alignItems:'center',gap:8,border:'1px solid #7c929e',borderRadius:9,background:'#283a44',color:'#e5f3f7',padding:'9px 11px',marginBottom:16,fontWeight:650,fontSize:13,cursor:'pointer'}}><ArrowLeft size={17}/> 다른 움직임 선택</button>:<p style={{fontSize:12,opacity:.75,marginBottom:12}}>움직임을 선택하면 관련 근육을 3D에서 함께 표시합니다.</p>}
-    {!activeMovement&&<div style={{display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gap:8,marginBottom:18}}>{movementGroups.filter(g=>g.category===movementCategory).map(g=><button key={g.title} type="button" aria-pressed={activeMovement?.title===g.title} onClick={()=>selectMovement(g)} style={{minHeight:44,padding:'10px 9px',borderRadius:9,border:activeMovement?.title===g.title?'1px solid #c1e3e8':'1px solid #48555d',background:activeMovement?.title===g.title?'#d6ecee':'#263139',color:activeMovement?.title===g.title?'#16272d':'#f3f6f8',fontSize:12,fontWeight:activeMovement?.title===g.title?700:500,textAlign:'left',lineHeight:1.35,cursor:'pointer',whiteSpace:'normal',overflowWrap:'break-word'}}>{g.title}</button>)}</div>}
+    {!activeMovement&&<div style={{display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gap:8,marginBottom:18}}>{movementGroups.filter(g=>g.category===movementCategory).map(g=><button key={g.title} type="button" aria-pressed={false} onClick={()=>selectMovement(g)} style={{minHeight:44,padding:'10px 9px',borderRadius:9,border:'1px solid #48555d',background:'#263139',color:'#f3f6f8',fontSize:12,fontWeight:500,textAlign:'left',lineHeight:1.35,cursor:'pointer',whiteSpace:'normal',overflowWrap:'break-word'}}>{g.title}</button>)}</div>}
     {activeMovement&&<div style={{borderTop:'1px solid #48555d',paddingTop:16}}>
      <h3 style={{fontSize:17,fontWeight:700,marginBottom:8}}>{activeMovement.title}</h3><p style={{fontSize:13,lineHeight:1.65,opacity:.9,marginBottom:14}}>{activeMovement.movement}</p>
      <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:8}}><strong style={{fontSize:13}}>함께 작용하는 근육</strong><span style={{fontSize:11,opacity:.7}}>{state.selected.length}개 3D 구조</span></div>
-     {movementMembers.map((member,i)=><div key={i} style={{display:'flex',alignItems:'center',gap:8,padding:'11px 0',borderBottom:'1px solid #3b474e'}}><div style={{flex:1,minWidth:0}}><strong style={{display:'block',fontSize:13,lineHeight:1.5}}>{member.label.replace(/^—\s*/,'').trim()||member.name}</strong><span style={{fontSize:11,opacity:.7}}>{member.ids.length?`${member.ids.length}개 3D 구조`:"3D 형상 없음 · 한국어 설명 제공"}</span></div><button type="button" onClick={()=>{const id=member.ids[0];if(id)choosePart(id);else setTextOnlyMember({name:member.name,notionUrl:member.notionUrl});}} style={{flexShrink:0,padding:'8px 9px',borderRadius:7,border:'1px solid #9baeb9',background:'#e4edf2',color:'#18252e',fontSize:12,fontWeight:650,cursor:'pointer'}}>{member.ids.length?'개별 보기':'설명 보기'}</button><a href={member.notionUrl} target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:'#a8d8ff',whiteSpace:'nowrap'}}>노션 ↗</a></div>)}
+     {movementMembers.map((member,i)=><div key={i} style={{display:'flex',alignItems:'center',gap:8,padding:'11px 0',borderBottom:'1px solid #3b474e'}}><div style={{flex:1,minWidth:0}}><strong style={{display:'block',fontSize:13,lineHeight:1.5}}>{movementMemberLabel(member)}</strong><span style={{fontSize:11,opacity:.7}}>{member.ids.length?`${member.ids.length}개 3D 구조`:"3D 형상 없음 · 한국어 설명 제공"}</span></div><button type="button" onClick={()=>{const id=member.ids[0];if(id)choosePart(id);else setTextOnlyMember({name:member.name,notionUrl:member.notionUrl});}} style={{flexShrink:0,padding:'8px 9px',borderRadius:7,border:'1px solid #9baeb9',background:'#e4edf2',color:'#18252e',fontSize:12,fontWeight:650,cursor:'pointer'}}>{member.ids.length?'개별 보기':'설명 보기'}</button><a href={member.notionUrl} target="_blank" rel="noopener noreferrer" style={{fontSize:12,color:'#a8d8ff',whiteSpace:'nowrap'}}>노션 ↗</a></div>)}
      {textOnlyMember&&<div style={{padding:'16px',margin:'14px 0',border:'1px solid #638291',borderRadius:12,background:'#23343e'}}>
       <button type="button" onClick={()=>setTextOnlyMember(null)} style={{display:'flex',alignItems:'center',gap:6,background:'none',border:0,color:'#c5e7f2',fontSize:12,padding:0,cursor:'pointer',marginBottom:12}}><ArrowLeft size={15}/> {activeMovement.title} 목록으로 돌아가기</button>
       <h3 style={{fontSize:17,fontWeight:700,marginBottom:8}}>{textOnlyMember.name}</h3>

@@ -1344,5 +1344,6 @@
   "papillary muscle": {
     "ko": "유두근",
     "aliases": []
-  }
+  },
+  "tensor fasciae latae": {"ko": "대퇴근막장근", "aliases": ["넙다리근막긴장근", "TFL"], "summary": "위앞엉덩뼈가시 부근에서 넙다리 앞가쪽 위쪽으로 내려와 장경인대로 이어지는 짧은 근육입니다."}
 }

@@ -22,7 +22,8 @@ export const SUPPLEMENTAL_NAMES=[
 ] as const;
 export const SUPPLEMENTAL_IDS=new Map<string,string>(SUPPLEMENTAL_NAMES.map((name,i)=>[name.toLowerCase(),'ecorche-'+i]));
 export function withSupplementalMuscles(atlas:Atlas):Atlas{
- // TFL is an existing short proximal-thigh muscle, not the full iliotibial tract.\n const correctedParts=atlas.parts.map(p=>(p.system==='skeletal'||p.system==='connective')&&/^(left|right) (levator scapulae|subscapularis|tensor fasciae latae|tibialis anterior|tibialis posterior|fibularis (longus|brevis|tertius))$/i.test(p.name)?{...p,system:'muscular' as const}:p);
+ // TFL is an existing short proximal-thigh muscle, not the full iliotibial tract.
+ const correctedParts=atlas.parts.map(p=>(p.system==='skeletal'||p.system==='connective')&&/^(left|right) (levator scapulae|subscapularis|tensor fasciae latae|tibialis anterior|tibialis posterior|fibularis (longus|brevis|tertius))$/i.test(p.name)?{...p,system:'muscular' as const}:/^(left|right) iliotibial tract$/i.test(p.name)?{...p,system:'connective' as const}:p);
  const existing=new Set(correctedParts.map(p=>p.name.toLowerCase()));
  const additions:Part[]=SUPPLEMENTAL_NAMES.filter(name=>!existing.has(name.toLowerCase())).map(name=>({
   id:SUPPLEMENTAL_IDS.get(name.toLowerCase())!,name,conceptId:'supp-'+name.toLowerCase().replace(/[^a-z0-9]+/g,'-'),system:'muscular',chunk:-1,
