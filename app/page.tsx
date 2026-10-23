@@ -23,7 +23,7 @@ const normalizeMovementName=(v:string)=>v.replace(/^(왼쪽|오른쪽|좌측|우
 function matchesMovementMember(english:string,korean:string,member:{name:string;label:string;qualifier?:string}):boolean{
  const target=normalizeMovementName(member.name);
  const ko=normalizeMovementName(korean);
- const en=english.toLowerCase();
+ const en=english.toLowerCase().replace(/\b(left|right)\b/g,'').replace(/\s+/g,' ').trim();
  const aliases=GROUP_ALIASES[target]??MORE_GROUP_ALIASES[target]??[];
  const matching=aliases.some(a=>en.includes(a))||(target.length>=2&&ko.includes(target));
  if(!matching)return false;
