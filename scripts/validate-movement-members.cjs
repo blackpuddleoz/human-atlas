@@ -36,3 +36,17 @@ for(const side of ['Left','Right']){
  assert.ok(!matchesMovementMember(band.name,getKoreanName(band.name),member));
 }
 console.log(`Validated ${groups.length} movement groups: canonical labels, trapezius subdivisions, bilateral TFL meshes and separate IT bands.`);
+const {movementMemberColor,movementSelectionColors,MOVEMENT_COLORS}=require('../app/movement-members.ts');
+for(const group of groups){
+ assert.ok(group.members.length<=MOVEMENT_COLORS.length);
+ const members=group.members.map((member,i)=>({color:movementMemberColor(i),ids:atlas.parts.filter(p=>p.system==='muscular'&&matchesMovementMember(p.name,getKoreanName(p.name),member)).map(p=>p.id)}));
+ assert.equal(new Set(members.map(m=>m.color)).size,members.length,group.title);
+ const colors=movementSelectionColors(members);
+ for(const member of members)for(const id of member.ids){
+  const first=members.find(m=>m.ids.includes(id));
+  assert.equal(colors[id],first.color);
+ }
+}
+assert.deepEqual(movementSelectionColors([]),{});
+assert.deepEqual(movementSelectionColors([{ids:['left','right'],color:'#E87832'}]),{left:'#E87832',right:'#E87832'});
+console.log('Validated unique member colors in all 43 movement groups, bilateral consistency, shared mesh precedence, and cleared palettes.');

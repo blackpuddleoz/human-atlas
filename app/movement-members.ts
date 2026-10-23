@@ -30,3 +30,12 @@ export function movementMemberLabel(member:{name:string;label:string;qualifier?:
  if(normalizeMovementName(label).includes(normalizeMovementName(name)))return label;
  return qualifier?`${name} (${qualifier})`:name;
 }
+
+// One shared key for the legend and every left/right mesh belonging to a member.
+export const MOVEMENT_COLORS=['#E87832','#367DE5','#B452CC','#249C75','#DFB62E','#D84C6F','#4BB8CE','#8A9940'] as const;
+export const movementMemberColor=(index:number):string=>MOVEMENT_COLORS[index % MOVEMENT_COLORS.length];
+export function movementSelectionColors(members:ReadonlyArray<{ids:string[];color:string}>):Record<string,string>{
+ const colors:Record<string,string>={};
+ for(const member of members)for(const id of member.ids)colors[id]??=member.color;
+ return colors;
+}
