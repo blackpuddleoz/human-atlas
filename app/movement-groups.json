@@ -474,5 +474,243 @@
       }
     ],
     "notionUrl": "https://app.notion.com/p/3d956328112a81e999c9ca816b0c5ed7"
+  },
+  {
+    "category": "upper",
+    "title": "수근관절 신전근",
+    "movement": "손목을 손등 쪽으로 펴는 움직임.",
+    "members": [
+      {
+        "name": "장요측수근신근",
+        "label": "장요측수근신근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81c1888ee3e347dc0102"
+      },
+      {
+        "name": "단요측수근신근",
+        "label": "단요측수근신근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a810fa299f3dee8fe42bb"
+      },
+      {
+        "name": "척측수근신근",
+        "label": "척측수근신근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81af8762fec15f67e091"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81688821f66fc85baeb2"
+  },
+  {
+    "category": "upper",
+    "title": "수근관절 내전근",
+    "movement": "척측편위: 손목을 새끼손가락 쪽으로 기울이는 움직임. 원본 도판 번호와 전·후면 표기가 서로 뒤바뀐 것으로 보이므로 개별 근육 페이지와 대조한다.",
+    "members": [
+      {
+        "name": "척측수근신근",
+        "label": "척측수근신근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81af8762fec15f67e091"
+      },
+      {
+        "name": "척측수근굴근",
+        "label": "척측수근굴근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81478c24e624618db89b"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81fd8ac1feb1131b55c2"
+  },
+  {
+    "category": "upper",
+    "title": "수근관절 외전근",
+    "movement": "요측편위: 손목을 엄지 쪽으로 기울이는 움직임. 이 목록은 p.101의 수록 근육이다.",
+    "members": [
+      {
+        "name": "요측수근굴근",
+        "label": "요측수근굴근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81c0bc4bd0eb97e452f1"
+      },
+      {
+        "name": "장요측수근신근",
+        "label": "장요측수근신근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81c1888ee3e347dc0102"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a810faeacf994cc1c23ab"
+  },
+  {
+    "category": "upper",
+    "title": "손가락 외전근",
+    "movement": "엄지 외전과 나머지 손가락 외전의 운동면을 구분한다.",
+    "members": [
+      {
+        "name": "장무지외전근",
+        "label": "— 엄지 CM",
+        "qualifier": "엄지 CM",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8167bd55d71fe034bf46"
+      },
+      {
+        "name": "단무지외전근",
+        "label": "— 엄지 CM",
+        "qualifier": "엄지 CM",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81b6afa4df80980c994c"
+      },
+      {
+        "name": "배측골간근",
+        "label": "— 제2–4지 MP",
+        "qualifier": "제2–4지 MP",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81cba1ddd6bdf7b5d8f5"
+      },
+      {
+        "name": "소지외전근",
+        "label": "— 제5지 MP",
+        "qualifier": "제5지 MP",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81298dbbc98667cf51ba"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81e18885c77a6f470408"
+  },
+  {
+    "category": "upper",
+    "title": "손가락 내전근",
+    "movement": "엄지를 모으거나 손가락을 가운데 손가락 축으로 모으는 움직임.",
+    "members": [
+      {
+        "name": "무지내전근",
+        "label": "— 엄지",
+        "qualifier": "엄지",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8191a373e96b7a32a400"
+      },
+      {
+        "name": "장측골간근",
+        "label": "— 제2·4·5지",
+        "qualifier": "제2·4·5지",
+        "notionUrl": "https://app.notion.com/p/3d956328112a813aac96c804df313c75"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a81679092c7b1d394792e"
+  },
+  {
+    "category": "upper",
+    "title": "손가락 신전근",
+    "movement": "교재 p.103의 PIP·DIP 신전 목록에는 소지굴근도 적혀 있다. 개별 페이지 p.77의 작용은 소지 MP 굴곡이므로 이 부분은 교재 내 대조가 필요한 항목으로 남긴다.",
+    "members": [
+      {
+        "name": "단무지신근",
+        "label": "— 엄지 MP",
+        "qualifier": "엄지 MP",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81779658fab4e598a9ea"
+      },
+      {
+        "name": "장무지신근",
+        "label": "— 엄지 IP 및 MP",
+        "qualifier": "엄지 IP 및 MP",
+        "notionUrl": "https://app.notion.com/p/3d956328112a811ca18addac11377baf"
+      },
+      {
+        "name": "지신근",
+        "label": "— 제2–5지 MP",
+        "qualifier": "제2–5지 MP",
+        "notionUrl": "https://app.notion.com/p/3d956328112a810c9e06e89d958d5218"
+      },
+      {
+        "name": "시지신근",
+        "label": "— 시지 MP",
+        "qualifier": "시지 MP",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81dcb914f597cc27f759"
+      },
+      {
+        "name": "소지신근",
+        "label": "— 소지 MP",
+        "qualifier": "소지 MP",
+        "notionUrl": "https://app.notion.com/p/3d956328112a810ab1dfe05707f14701"
+      },
+      {
+        "name": "충양근",
+        "label": "— PIP·DIP",
+        "qualifier": "PIP·DIP",
+        "notionUrl": "https://app.notion.com/p/3d956328112a816b9719fb2030ca8c6a"
+      },
+      {
+        "name": "장측골간근",
+        "label": "— PIP·DIP",
+        "qualifier": "PIP·DIP",
+        "notionUrl": "https://app.notion.com/p/3d956328112a813aac96c804df313c75"
+      },
+      {
+        "name": "배측골간근",
+        "label": "— PIP·DIP",
+        "qualifier": "PIP·DIP",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81cba1ddd6bdf7b5d8f5"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a8128ac4acf0056e5255a"
+  },
+  {
+    "category": "upper",
+    "title": "손가락 굴곡근",
+    "movement": "p.104 목록과 개별 근육의 작용을 연결했다. p.104는 엄지 굴곡근을 MP 항목에 묶지만, 장무지굴근의 개별 설명 p.73은 IP 굴곡으로 제시한다.",
+    "members": [
+      {
+        "name": "장무지굴근",
+        "label": "— 엄지 IP",
+        "qualifier": "엄지 IP",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81dcb88ee6c55273d96a"
+      },
+      {
+        "name": "단무지굴근",
+        "label": "— 엄지 MP",
+        "qualifier": "엄지 MP",
+        "notionUrl": "https://app.notion.com/p/3d956328112a817092e5c87aecc691f3"
+      },
+      {
+        "name": "심지굴근",
+        "label": "— 제2–5지 DIP",
+        "qualifier": "제2–5지 DIP",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81628535e51d7123c893"
+      },
+      {
+        "name": "천지굴근",
+        "label": "— 제2–5지 PIP",
+        "qualifier": "제2–5지 PIP",
+        "notionUrl": "https://app.notion.com/p/3d956328112a8154ad59f296a8dea9c1"
+      },
+      {
+        "name": "충양근",
+        "label": "— MP; p.83",
+        "qualifier": "MP; p.83",
+        "notionUrl": "https://app.notion.com/p/3d956328112a816b9719fb2030ca8c6a"
+      },
+      {
+        "name": "소지굴근",
+        "label": "— 소지 MP; p.77",
+        "qualifier": "소지 MP; p.77",
+        "notionUrl": "https://app.notion.com/p/3d956328112a815fb0edc4acfe25ca6d"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a811c9714f3c649a08531"
+  },
+  {
+    "category": "upper",
+    "title": "손가락 대립근",
+    "movement": "엄지와 새끼손가락의 맞섬. 두 중수골의 회전 작용을 개별 근육 설명에서 함께 본다.",
+    "members": [
+      {
+        "name": "무지대립근",
+        "label": "— 엄지",
+        "qualifier": "엄지",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81ebac78e472540ae495"
+      },
+      {
+        "name": "소지대립근",
+        "label": "— 새끼손가락",
+        "qualifier": "새끼손가락",
+        "notionUrl": "https://app.notion.com/p/3d956328112a81eab373c87c4a37dd91"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3d956328112a818e97b7ffe7a3875961"
   }
 ]
