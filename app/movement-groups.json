@@ -890,5 +890,195 @@
       }
     ],
     "notionUrl": "https://app.notion.com/p/3db56328112a8131ae5bf9184839a6da"
+  },
+  {
+    "category": "lower",
+    "title": "발목 배측굴곡근",
+    "movement": "발등을 정강이 쪽으로 가져오는 배측굴곡에 관여합니다.",
+    "members": [
+      {
+        "name": "전경골근",
+        "label": "— 전경골근",
+        "qualifier": "전경골근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a8126970ee58aadb4b70b"
+      },
+      {
+        "name": "장무지신근·장지신근은 보조 근육으로 함께 봅니다.",
+        "label": "장무지신근·장지신근은 보조 근육으로 함께 봅니다.",
+        "qualifier": "",
+        "notionUrl": ""
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a812e9f92fc37b6bcd0a2"
+  },
+  {
+    "category": "lower",
+    "title": "발목 저측굴곡근",
+    "movement": "발끝을 아래로 뻗는 저측굴곡에 관여합니다.",
+    "members": [
+      {
+        "name": "비복근",
+        "label": "— 비복근",
+        "qualifier": "비복근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81e28261fd8e4e85bd9a"
+      },
+      {
+        "name": "가자미근",
+        "label": "— 가자미근",
+        "qualifier": "가자미근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a810f8342f9a1e985d1b0"
+      },
+      {
+        "name": "후경골근",
+        "label": "— 후경골근",
+        "qualifier": "후경골근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81f5b84fff954c544d25"
+      },
+      {
+        "name": "장비골근",
+        "label": "— 장비골근",
+        "qualifier": "장비골근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a8160b0a9e4a71763e4aa"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a818bb832e07332befcfa"
+  },
+  {
+    "category": "lower",
+    "title": "발 내번근",
+    "movement": "발바닥이 안쪽을 향하는 내번에 관여합니다.",
+    "members": [
+      {
+        "name": "전경골근",
+        "label": "— 전경골근",
+        "qualifier": "전경골근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a8126970ee58aadb4b70b"
+      },
+      {
+        "name": "후경골근",
+        "label": "— 후경골근",
+        "qualifier": "후경골근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81f5b84fff954c544d25"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a81b5b5cee9fd444e1b78"
+  },
+  {
+    "category": "lower",
+    "title": "발 외번근",
+    "movement": "발바닥이 바깥쪽을 향하는 외번에 관여합니다.",
+    "members": [
+      {
+        "name": "장비골근",
+        "label": "— 장비골근",
+        "qualifier": "장비골근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a8160b0a9e4a71763e4aa"
+      },
+      {
+        "name": "단비골근·제3비골근은 함께 봅니다.",
+        "label": "단비골근·제3비골근은 함께 봅니다.",
+        "qualifier": "",
+        "notionUrl": ""
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a819e9b9eeb24045f5116"
+  },
+  {
+    "category": "spine",
+    "title": "척추 신전근",
+    "movement": "척추를 뒤쪽으로 펴는 신전에 관여합니다.",
+    "members": [
+      {
+        "name": "척추기립근",
+        "label": "— 척추기립근",
+        "qualifier": "척추기립근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81ed8479ccd6514e3bbf"
+      },
+      {
+        "name": "다열근",
+        "label": "— 다열근",
+        "qualifier": "다열근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81df95f4c3341820c40d"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a810a96c1d731064810d7"
+  },
+  {
+    "category": "spine",
+    "title": "척추 굴곡근",
+    "movement": "척추를 앞쪽으로 굽히는 굴곡에 관여합니다.",
+    "members": [
+      {
+        "name": "복직근",
+        "label": "— 복직근",
+        "qualifier": "복직근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a8196abe4cbbac75e2579"
+      },
+      {
+        "name": "외복사근",
+        "label": "— 외복사근",
+        "qualifier": "외복사근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a813c9fc1c9c13539e5c7"
+      },
+      {
+        "name": "내복사근",
+        "label": "— 내복사근",
+        "qualifier": "내복사근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a8182a3a1f473985f0880"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a813db306e5a86b857a9d"
+  },
+  {
+    "category": "spine",
+    "title": "척추 회전근",
+    "movement": "몸통의 축회전에 관여합니다.",
+    "members": [
+      {
+        "name": "외복사근",
+        "label": "— 외복사근",
+        "qualifier": "외복사근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a813c9fc1c9c13539e5c7"
+      },
+      {
+        "name": "내복사근",
+        "label": "— 내복사근",
+        "qualifier": "내복사근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a8182a3a1f473985f0880"
+      },
+      {
+        "name": "다열근",
+        "label": "— 다열근",
+        "qualifier": "다열근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81df95f4c3341820c40d"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a8146bcdacea814016a8d"
+  },
+  {
+    "category": "spine",
+    "title": "척추 측굴근",
+    "movement": "몸통을 한쪽으로 기울이는 측굴에 관여합니다.",
+    "members": [
+      {
+        "name": "요방형근",
+        "label": "— 요방형근",
+        "qualifier": "요방형근",
+        "notionUrl": "https://app.notion.com/p/3db56328112a8149ac3fdda289e8d0ea"
+      },
+      {
+        "name": "척추기립근",
+        "label": "— 척추기립근 한쪽 작용",
+        "qualifier": "척추기립근 한쪽 작용",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81ed8479ccd6514e3bbf"
+      },
+      {
+        "name": "외복사근",
+        "label": "/  — 복사근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3db56328112a813c9fc1c9c13539e5c7"
+      }
+    ],
+    "notionUrl": "https://app.notion.com/p/3db56328112a81169bdbfbec336fb4e1"
   }
 ]
