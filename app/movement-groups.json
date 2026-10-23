@@ -803,10 +803,28 @@
         "notionUrl": "https://app.notion.com/p/3db56328112a81ee8ec4f934d45c982d"
       },
       {
-        "name": "장내전근·단내전근·박근·치골근은 세부 근육으로 함께 봅니다.",
-        "label": "장내전근·단내전근·박근·치골근은 세부 근육으로 함께 봅니다.",
+        "name": "장내전근",
+        "label": "장내전근",
         "qualifier": "",
-        "notionUrl": ""
+        "notionUrl": "https://app.notion.com/p/3db56328112a81e293c6cc7c44865a82"
+      },
+      {
+        "name": "단내전근",
+        "label": "단내전근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81e293c6cc7c44865a82"
+      },
+      {
+        "name": "박근",
+        "label": "박근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81e293c6cc7c44865a82"
+      },
+      {
+        "name": "치골근",
+        "label": "치골근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3db56328112a81e293c6cc7c44865a82"
       }
     ],
     "notionUrl": "https://app.notion.com/p/3db56328112a81e293c6cc7c44865a82"
@@ -903,10 +921,16 @@
         "notionUrl": "https://app.notion.com/p/3db56328112a8126970ee58aadb4b70b"
       },
       {
-        "name": "장무지신근·장지신근은 보조 근육으로 함께 봅니다.",
-        "label": "장무지신근·장지신근은 보조 근육으로 함께 봅니다.",
+        "name": "장무지신근",
+        "label": "장무지신근",
         "qualifier": "",
-        "notionUrl": ""
+        "notionUrl": "https://app.notion.com/p/3db56328112a812e9f92fc37b6bcd0a2"
+      },
+      {
+        "name": "장지신근",
+        "label": "장지신근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3db56328112a812e9f92fc37b6bcd0a2"
       }
     ],
     "notionUrl": "https://app.notion.com/p/3db56328112a812e9f92fc37b6bcd0a2"
@@ -975,10 +999,16 @@
         "notionUrl": "https://app.notion.com/p/3db56328112a8160b0a9e4a71763e4aa"
       },
       {
-        "name": "단비골근·제3비골근은 함께 봅니다.",
-        "label": "단비골근·제3비골근은 함께 봅니다.",
+        "name": "단비골근",
+        "label": "단비골근",
         "qualifier": "",
-        "notionUrl": ""
+        "notionUrl": "https://app.notion.com/p/3db56328112a819e9b9eeb24045f5116"
+      },
+      {
+        "name": "제3비골근",
+        "label": "제3비골근",
+        "qualifier": "",
+        "notionUrl": "https://app.notion.com/p/3db56328112a819e9b9eeb24045f5116"
       }
     ],
     "notionUrl": "https://app.notion.com/p/3db56328112a819e9b9eeb24045f5116"
