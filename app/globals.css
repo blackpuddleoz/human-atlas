@@ -107,3 +107,29 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 .attachment-modes button{padding:5px 2px!important;min-width:0;font-size:11px!important}
 
 .attachment-sites{display:grid;gap:7px;padding:10px 0;border-top:1px solid #d9dfe2}.attachment-sites h4{font-size:12px;font-weight:600}.attachment-site{display:flex;gap:8px;align-items:baseline;font-size:12px;line-height:1.45}.attachment-site>span:first-child{font-size:10px;font-weight:700;flex-shrink:0}.site-origin{color:#b46b10}.site-insertion{color:#316fc0}
+
+/* Muscle content must remain reachable below the fixed header and actions. */
+.detail-sheet .detail-header,.detail-sheet .detail-actions{flex-shrink:0}
+.detail-sheet:has(.attachment-info){display:flex;flex-direction:column;overflow:hidden!important}
+.detail-sheet:has(.attachment-info) .detail-scroll{flex:1 1 0;min-height:0;max-height:none!important;overflow-y:auto;touch-action:pan-y;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.detail-sheet:has(.attachment-info) .attachment-info{flex-shrink:0;display:flex;flex-direction:column;gap:14px}
+.attachment-info h3,.attachment-info p{margin:0}
+.attachment-info p{line-height:1.75}
+.attachment-observation{padding:12px;border-radius:9px;background:#edf4f5}
+.detail-expand{display:none}
+@media(max-width:767px) and (orientation:portrait){
+ .detail-sheet:has(.attachment-info),.detail-sheet.is-isolated:has(.attachment-info){height:min(54dvh,calc(100dvh - 210px))!important;max-height:min(54dvh,calc(100dvh - 210px))!important;bottom:calc(132px + env(safe-area-inset-bottom))!important;top:auto!important;gap:10px!important;padding:14px 16px!important}
+ .detail-sheet:has(.attachment-info) .detail-scroll{max-height:none!important;min-height:76px}
+ .detail-sheet:has(.attachment-info) .detail-header{gap:6px!important}
+ .detail-header>button[aria-label]{min-height:36px;margin-bottom:2px!important;padding:6px 9px!important;font-size:12px!important}
+ .detail-expand{display:inline-flex;align-self:flex-start;align-items:center;min-height:32px;padding:4px 9px;border:1px solid #9eb5c0;border-radius:7px;background:#edf4f6;color:#274450;font-size:12px;font-weight:600}
+ .detail-sheet .detail-expand{order:2}
+ .detail-sheet .structure-title{font-size:19px!important;line-height:1.35!important}
+ .detail-sheet .detail-accent,.detail-sheet .detail-header>.eyebrow{display:none}
+ .detail-sheet:has(.attachment-info) .attachment-info{padding-top:0!important;border-top:0;gap:14px}
+ .detail-sheet:has(.attachment-info) .attachment-info h3{font-size:13px}
+ .detail-sheet:has(.attachment-info) .attachment-info p{font-size:14px;line-height:1.7}
+ .detail-sheet:has(.attachment-info) .attachment-info p strong{font-size:12px;margin-bottom:4px}
+ .detail-sheet.details-expanded:has(.attachment-info){top:calc(12px + env(safe-area-inset-top))!important;bottom:calc(12px + env(safe-area-inset-bottom))!important;height:auto!important;max-height:none!important}
+ body:has(.detail-sheet.details-expanded) .bottom-dock{visibility:hidden}
+}

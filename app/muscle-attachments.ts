@@ -1,12 +1,13 @@
+import {getMuscleTeaching} from './muscle-teaching';
 /** Curated introductory muscle attachment descriptions.
  * Bone highlights indicate the attachment-bearing bone, not a precise enthesis.
  */
 export interface MuscleAttachment {
- origin:string; insertion:string; action:string; yoga?:string; note?:string; sourceUrl?:string; originBones:string[]; insertionBones:string[]; sites?:{kind:'origin'|'insertion';label:string;bone:string;status:'text-verified'|'coordinate-verified'}[];
+ origin:string; insertion:string; action:string; yoga?:string; note?:string; description?:string; observation?:string; sourceUrl?:string; originBones:string[]; insertionBones:string[]; sites?:{kind:'origin'|'insertion';label:string;bone:string;status:'text-verified'|'coordinate-verified'}[];
 }
 const DATA:Record<string,MuscleAttachment>={
  'inferior oblique':{"origin":"안와 바닥 앞안쪽(상악골 안와면)","insertion":"안구 뒤아래쪽 공막","action":"안구 외회선·거상·외전 보조","originBones":["maxilla"],"insertionBones":[]},
- 'inferior rectus':{"origin":"안와첨의 공통힘줄고리","insertion":"안구 아래쪽 공막","action":"안구 하전·내회선·내전 보조","originBones":[],"insertionBones":[]},
+ 'inferior rectus':{"origin":"안와첨의 공통힘줄고리","insertion":"안구 아래쪽 공막","action":"안구 하전·외회선·내전 보조","originBones":[],"insertionBones":[]},
  'lateral rectus':{"origin":"안와첨의 공통힘줄고리","insertion":"안구 가쪽 공막","action":"안구 외전","originBones":[],"insertionBones":[]},
  'levator palpebrae superioris':{"origin":"접형골 작은날개 위쪽","insertion":"위눈꺼풀판·위눈꺼풀 피부","action":"위눈꺼풀 거상","originBones":["sphenoid bone"],"insertionBones":[]},
  'medial rectus':{"origin":"안와첨의 공통힘줄고리","insertion":"안구 안쪽 공막","action":"안구 내전","originBones":[],"insertionBones":[]},
@@ -259,7 +260,11 @@ function functionalTeachingContext(key:string, muscle:MuscleAttachment):string{
 export function getMuscleAttachment(name:string):MuscleAttachment|null{
  const key=normalizeMuscleName(name);
  const exact=DATA[key];
- if(exact)return exact.note?exact:{...exact,note:functionalTeachingContext(key,exact)};
+ if(exact){
+  const teaching=getMuscleTeaching(key);
+  if(teaching)return {...exact,description:teaching.description,note:teaching.description,observation:teaching.observation};
+  return exact.note?exact:{...exact,note:functionalTeachingContext(key,exact)};
+ }
  // Parts whose attachment sites differ must be authored individually.
  // Do not substitute whole-muscle data for named heads/parts.
  return null;
