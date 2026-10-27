@@ -50,3 +50,26 @@ for(const group of groups){
 assert.deepEqual(movementSelectionColors([]),{});
 assert.deepEqual(movementSelectionColors([{ids:['left','right'],color:'#E87832'}]),{left:'#E87832',right:'#E87832'});
 console.log('Validated unique member colors in all 43 movement groups, bilateral consistency, shared mesh precedence, and cleared palettes.');
+const {getMuscleAttachment}=require('../app/muscle-attachments.ts');
+for(const group of groups){
+ for(const member of group.members){
+  const selected=atlas.parts.filter(p=>(p.system==='muscular'||getMuscleAttachment(p.name))&&matchesMovementMember(p.name,getKoreanName(p.name),member,group.category));
+  assert.ok(selected.length,`${group.title}: missing ${member.name}`);
+  if(group.category==='upper')assert.ok(selected.every(p=>!getMuscleAttachment(p.name)?.originBones.some(b=>/fibula|tibia|femur|calcaneus|metatarsal/.test(b))),`${group.title}: lower limb leaked into ${member.name}`);
+  if(group.category==='lower')assert.ok(selected.every(p=>!getMuscleAttachment(p.name)?.originBones.some(b=>/humerus|radius|ulna|carpal/.test(b))),`${group.title}: upper limb leaked into ${member.name}`);
+ }
+}
+for(const [title,name,required,forbidden] of [
+ ['손가락 굴곡근','장무지굴근','flexor pollicis longus','flexor hallucis longus'],
+ ['손가락 신전근','장무지신근','extensor pollicis longus','extensor hallucis longus'],
+ ['발목 배측굴곡근','장무지신근','extensor hallucis longus','extensor pollicis longus'],
+ ['손가락 신전근','지신근','extensor digitorum','extensor digitorum longus'],
+ ['주관절 굴곡근','상완근','brachialis','coracobrachialis']
+]){
+ const group=groups.find(g=>g.title===title),member=group.members.find(m=>m.name===name);
+ assert.ok(matchesMovementMember('Right '+required,getKoreanName('Right '+required),member,group.category),title);
+ assert.ok(!matchesMovementMember('Right '+forbidden,getKoreanName('Right '+forbidden),member,group.category),title);
+}
+assert.match(getKoreanName('Right flexor pollicis longus'),/\(손\)/);
+assert.match(getKoreanName('Right flexor hallucis longus'),/\(발\)/);
+console.log('Validated all 43 movement groups against hand/foot cross-matching and unrelated partial-name matches.');

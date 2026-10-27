@@ -1,11 +1,30 @@
 import {GROUP_ALIASES,MORE_GROUP_ALIASES} from './movement-aliases';
 export const normalizeMovementName=(v:string)=>v.replace(/^(왼쪽|오른쪽|좌측|우측)\s*/,'').replace(/\s/g,'').replace(/근군$/,'근');
-export function matchesMovementMember(english:string,korean:string,member:{name:string;label:string;qualifier?:string}):boolean{
+/** English identities take precedence over ambiguous Korean hand/foot names. */
+export function getMovementAliases(name:string,category?:string):string[]{
+ const target=normalizeMovementName(name);
+ const lower:Record<string,string[]>={
+  '장무지신근':['extensor hallucis longus'],'장무지굴근':['flexor hallucis longus'],
+  '단무지신근':['extensor hallucis brevis'],'단무지굴근':['flexor hallucis brevis'],
+  '무지외전근':['abductor hallucis'],'무지내전근':['adductor hallucis'],
+  '소지외전근':['abductor digiti minimi of foot'],'소지굴근':['flexor digiti minimi brevis of foot'],
+  '소지대립근':['opponens digiti minimi of foot'],'충양근':['lumbrical of foot']
+ };
+ return (category==='lower'?lower[target]:undefined)??GROUP_ALIASES[target]??MORE_GROUP_ALIASES[target]??[];
+}
+export function matchesMovementMember(english:string,korean:string,member:{name:string;label:string;qualifier?:string},category?:string):boolean{
  const target=normalizeMovementName(member.name);
  const ko=normalizeMovementName(korean);
  const en=english.toLowerCase().replace(/\b(left|right)\b/g,'').replace(/\s+/g,' ').trim();
- const aliases=GROUP_ALIASES[target]??MORE_GROUP_ALIASES[target]??[];
- const matching=aliases.some(a=>en.includes(a))||(target.length>=2&&ko.includes(target));
+ const aliases=getMovementAliases(member.name,category);
+ const foot=/\b(hallucis|of foot|plantar|tibialis|fibularis|gastrocnemius|soleus|femoris|gluteus|iliacus|psoas|pectineus|sartorius|gracilis|vastus|popliteus|plantaris)\b/.test(en)||/extensor digitorum longus|flexor digitorum (longus|brevis)|tensor fasciae latae/.test(en);
+ const hand=/\b(pollicis|carpi|of hand|brachii|brachialis|brachioradialis|pronator|supinator|anconeus)\b/.test(en);
+ if(category==='upper'&&foot||category==='lower'&&hand)return false;
+ const matching=aliases.length?aliases.some(a=>{
+  if(a==='extensor digitorum')return en==='extensor digitorum'||en==='extensor digitorum muscle';
+  const escaped=a.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  return new RegExp('(?:^| )'+escaped+'(?= |$)').test(en);
+ }):target.length>=2&&ko.includes(target);
  if(!matching)return false;
  const qualifier=(member.qualifier||member.label||'').replace(/^[—\s]+/,'');
  if(/상부·하부/.test(qualifier))return !/transverse part|middle/.test(en);

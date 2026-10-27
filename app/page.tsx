@@ -11,8 +11,7 @@ import {Combobox,ComboboxInput,ComboboxContent,ComboboxList,ComboboxItem,Combobo
 import AnatomyScene from './scene';
 import {useMobilePanel} from './mobile-panel';
 import movementGroups from './movement-groups.json';
-import {GROUP_ALIASES,MORE_GROUP_ALIASES} from './movement-aliases';
-import {normalizeMovementName,matchesMovementMember,movementMemberLabel,movementMemberColor,movementSelectionColors} from './movement-members';
+import {matchesMovementMember,movementMemberLabel,movementMemberColor,movementSelectionColors,getMovementAliases} from './movement-members';
 import {withSupplementalMuscles} from './supplemental-muscles';
 import {getMuscleAttachment} from './muscle-attachments';
 import {getKoreanName, getKoreanSummary, getKoreanDescription, koreanSystemName, findAnatomyConcepts} from './korean-anatomy';
@@ -49,10 +48,10 @@ export default function Home(){
  const insertionBoneIds=(attachmentMode==='insertion'||attachmentMode==='both')&&attachment?matchAttachmentBones(attachment.insertionBones):[];
  const visibleCount=atlas?.parts.filter(p=>state.isolate?(p.system==='skeletal'||state.selected.includes(p.id)):state.visible.includes(p.system)||state.selected.includes(p.id)).length??0;
  const results=useMemo(()=>atlas?findAnatomyConcepts(atlas,query):[],[atlas,query]);
- const movementMembers=useMemo(()=>activeMovement&&atlas?activeMovement.members.map((member,index)=>({...member,color:movementMemberColor(index),ids:atlas.parts.filter(p=>(p.system==='muscular'||getMuscleAttachment(p.name)!==null)&&matchesMovementMember(p.name,getKoreanName(p.name),member)).map(p=>p.id)})):[],[atlas,activeMovement]);
+ const movementMembers=useMemo(()=>activeMovement&&atlas?activeMovement.members.map((member,index)=>({...member,color:movementMemberColor(index),ids:atlas.parts.filter(p=>(p.system==='muscular'||getMuscleAttachment(p.name)!==null)&&matchesMovementMember(p.name,getKoreanName(p.name),member,activeMovement.category)).map(p=>p.id)})):[],[atlas,activeMovement]);
  const selectionColors=useMemo(()=>movementSelectionColors(movementMembers),[movementMembers]);
  const returnToMovement=()=>{if(!activeMovement)return;selectMovement(activeMovement);setPanel('movement');};
- const selectMovement=(group:MovementGroup)=>{setTextOnlyMember(null);setActiveMovement(group);setChosen(null);setDetails(false);setAttachmentMode('off');setState(s=>({...s,selected:[...new Set(group.members.flatMap(member=>atlas?.parts.filter(p=>(p.system==='muscular'||getMuscleAttachment(p.name)!==null)&&matchesMovementMember(p.name,getKoreanName(p.name),member)).map(p=>p.id)??[]))],isolate:true,explode:0,rotate:false,visible:['skeletal','muscular']}));};
+ const selectMovement=(group:MovementGroup)=>{setTextOnlyMember(null);setActiveMovement(group);setChosen(null);setDetails(false);setAttachmentMode('off');setState(s=>({...s,selected:[...new Set(group.members.flatMap(member=>atlas?.parts.filter(p=>(p.system==='muscular'||getMuscleAttachment(p.name)!==null)&&matchesMovementMember(p.name,getKoreanName(p.name),member,group.category)).map(p=>p.id)??[]))],isolate:true,explode:0,rotate:false,visible:['skeletal','muscular']}));};
  const choose=(c:Concept)=>{setAttachmentMode('off');setChosen(c);setState(s=>({...s,selected:c.elements,isolate:true,explode:0,rotate:false}));setDetails(true);setPanel(null);};
  useEffect(()=>{if(!atlas)return;return registerAtlasTools(atlas,c=>flushSync(()=>choose(c)));},[atlas]);
  const choosePart=(id:string)=>{setAttachmentMode('off');const p=parts.get(id);if(!p)return;setChosen({id:p.conceptId,name:p.name,elements:[id]});setState(s=>({...s,selected:[id],isolate:true,explode:0,rotate:false}));setDetails(true);setPanel(null);};
@@ -87,7 +86,7 @@ export default function Home(){
      {textOnlyMember&&<div style={{padding:'16px',margin:'14px 0',border:'1px solid #638291',borderRadius:12,background:'#23343e'}}>
       <button type="button" onClick={()=>setTextOnlyMember(null)} style={{display:'flex',alignItems:'center',gap:6,background:'none',border:0,color:'#c5e7f2',fontSize:12,padding:0,cursor:'pointer',marginBottom:12}}><ArrowLeft size={15}/> {activeMovement.title} 목록으로 돌아가기</button>
       <h3 style={{fontSize:17,fontWeight:700,marginBottom:8}}>{textOnlyMember.name}</h3>
-      {(()=>{const keys=GROUP_ALIASES[normalizeMovementName(textOnlyMember.name)]??MORE_GROUP_ALIASES[normalizeMovementName(textOnlyMember.name)]??[];const entry=keys.map(k=>getMuscleAttachment(k)).find(Boolean);return entry?<div style={{fontSize:13,lineHeight:1.8}}><p><strong>기시</strong> · {entry.origin}</p><p><strong>정지</strong> · {entry.insertion}</p><p><strong>작용</strong> · {entry.action}</p>{entry.note&&<p style={{marginTop:9}}>{entry.note}</p>}{entry.yoga&&<p style={{marginTop:9}}>{entry.yoga}</p>}</div>:<p style={{fontSize:13,lineHeight:1.7}}>현재 3D 데이터에 해당 근육 형상이 없어 입체 선택은 지원하지 않습니다. 노션에 정리된 개별 근육의 기시·정지·작용 및 기능해부학 설명을 확인하세요.</p>})()}
+      {(()=>{const keys=getMovementAliases(textOnlyMember.name,activeMovement.category);const entry=keys.map(k=>getMuscleAttachment(k)).find(Boolean);return entry?<div style={{fontSize:13,lineHeight:1.8}}><p><strong>기시</strong> · {entry.origin}</p><p><strong>정지</strong> · {entry.insertion}</p><p><strong>작용</strong> · {entry.action}</p>{entry.note&&<p style={{marginTop:9}}>{entry.note}</p>}{entry.yoga&&<p style={{marginTop:9}}>{entry.yoga}</p>}</div>:<p style={{fontSize:13,lineHeight:1.7}}>현재 3D 데이터에 해당 근육 형상이 없어 입체 선택은 지원하지 않습니다. 노션에 정리된 개별 근육의 기시·정지·작용 및 기능해부학 설명을 확인하세요.</p>})()}
       <a href={textOnlyMember.notionUrl} target="_blank" rel="noopener noreferrer" style={{display:'inline-block',marginTop:10,fontSize:12,color:'#b7e7ff'}}>노션 개별 근육 자료 보기 ↗</a>
       <p style={{fontSize:11,opacity:.7,marginTop:10}}>현재 3D 형상은 제공되지 않습니다. 다른 근육을 대신 표시하지 않습니다.</p>
      </div>}

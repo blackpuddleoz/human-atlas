@@ -942,16 +942,22 @@
     "aliases": []
   },
   "abductor hallucis": {
-    "ko": "무지외전근",
-    "aliases": []
+    "ko": "무지외전근(발)",
+    "aliases": [
+      "무지외전근"
+    ]
   },
   "abductor pollicis brevis": {
-    "ko": "단무지외전근",
-    "aliases": []
+    "ko": "단무지외전근(손)",
+    "aliases": [
+      "단무지외전근"
+    ]
   },
   "abductor pollicis longus": {
-    "ko": "장무지외전근",
-    "aliases": []
+    "ko": "장무지외전근(손)",
+    "aliases": [
+      "장무지외전근"
+    ]
   },
   "adductor minimus": {
     "ko": "소내전근",
@@ -990,24 +996,32 @@
     "aliases": []
   },
   "extensor hallucis brevis": {
-    "ko": "단무지신근",
-    "aliases": []
+    "ko": "단무지신근(발)",
+    "aliases": [
+      "단무지신근"
+    ]
   },
   "extensor hallucis longus": {
-    "ko": "장무지신근",
-    "aliases": []
+    "ko": "장무지신근(발)",
+    "aliases": [
+      "장무지신근"
+    ]
   },
   "extensor indicis": {
     "ko": "시지신근",
     "aliases": []
   },
   "extensor pollicis brevis": {
-    "ko": "단무지신근",
-    "aliases": []
+    "ko": "단무지신근(손)",
+    "aliases": [
+      "단무지신근"
+    ]
   },
   "extensor pollicis longus": {
-    "ko": "장무지신근",
-    "aliases": []
+    "ko": "장무지신근(손)",
+    "aliases": [
+      "장무지신근"
+    ]
   },
   "flexor accessorius": {
     "ko": "족저방형근",
@@ -1022,16 +1036,22 @@
     "aliases": []
   },
   "flexor hallucis longus": {
-    "ko": "장무지굴근",
-    "aliases": []
+    "ko": "장무지굴근(발)",
+    "aliases": [
+      "장무지굴근"
+    ]
   },
   "flexor pollicis brevis": {
-    "ko": "단무지굴근",
-    "aliases": []
+    "ko": "단무지굴근(손)",
+    "aliases": [
+      "단무지굴근"
+    ]
   },
   "flexor pollicis longus": {
-    "ko": "장무지굴근",
-    "aliases": []
+    "ko": "장무지굴근(손)",
+    "aliases": [
+      "장무지굴근"
+    ]
   },
   "gemellus inferior": {
     "ko": "하쌍자근",
@@ -1142,8 +1162,10 @@
     "aliases": []
   },
   "opponens pollicis": {
-    "ko": "무지대립근",
-    "aliases": []
+    "ko": "무지대립근(손)",
+    "aliases": [
+      "무지대립근"
+    ]
   },
   "palmaris longus": {
     "ko": "장장근",
@@ -1314,16 +1336,22 @@
     "aliases": []
   },
   "adductor hallucis": {
-    "ko": "무지내전근",
-    "aliases": []
+    "ko": "무지내전근(발)",
+    "aliases": [
+      "무지내전근"
+    ]
   },
   "adductor pollicis": {
-    "ko": "무지내전근",
-    "aliases": []
+    "ko": "무지내전근(손)",
+    "aliases": [
+      "무지내전근"
+    ]
   },
   "flexor hallucis brevis": {
-    "ko": "단무지굴근",
-    "aliases": []
+    "ko": "단무지굴근(발)",
+    "aliases": [
+      "단무지굴근"
+    ]
   },
   "flexor carpi ulnaris": {
     "ko": "척측수근굴근",
@@ -1345,5 +1373,12 @@
     "ko": "유두근",
     "aliases": []
   },
-  "tensor fasciae latae": {"ko": "대퇴근막장근", "aliases": ["넙다리근막긴장근", "TFL"], "summary": "위앞엉덩뼈가시 부근에서 넙다리 앞가쪽 위쪽으로 내려와 장경인대로 이어지는 짧은 근육입니다."}
+  "tensor fasciae latae": {
+    "ko": "대퇴근막장근",
+    "aliases": [
+      "넙다리근막긴장근",
+      "TFL"
+    ],
+    "summary": "위앞엉덩뼈가시 부근에서 넙다리 앞가쪽 위쪽으로 내려와 장경인대로 이어지는 짧은 근육입니다."
+  }
 }
