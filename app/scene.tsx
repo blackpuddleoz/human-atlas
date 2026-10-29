@@ -1,6 +1,7 @@
 import {getKoreanName} from './korean-anatomy';
 import {getValidatedLandmarks} from './attachment-landmarks';
 import {SUPPLEMENTAL_IDS,SUPPLEMENTAL_SOURCE,SUPPLEMENTAL_FALLBACK} from './supplemental-muscles';
+import {bakeSupplementalGeometry} from './supplemental-geometry';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 import {useEffect,useRef} from 'react';
 import * as T from 'three';
@@ -124,7 +125,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
     if(!id)continue;
     const index=atlas.parts.findIndex(p=>p.id===id);
     if(index<0)continue;
-    const geometry=sourceMesh.geometry.clone();geometry.applyMatrix4(sourceMesh.matrixWorld);geometry.computeBoundingBox();geometry.computeBoundingSphere();
+    const geometry=bakeSupplementalGeometry(sourceMesh.geometry,sourceMesh.matrixWorld);
     const mesh=new T.Mesh(geometry,new T.MeshStandardMaterial({color:0x74b9bd,metalness:0.04,roughness:0.62,side:T.DoubleSide}));
     mesh.userData.supplementId=id;mesh.visible=false;
     supplementRoot.add(mesh);supplemental.set(id,{mesh,index});

@@ -1,8 +1,8 @@
 import type {Atlas,Part} from './anatomy';
 /** Audited Ecorche supplemental meshes absent from BodyParts3D atlas.
- * Mesh binary: Charleeh/ecorche (CC BY-SA 4.0); sourced at runtime,
+ * Mesh binary: Charleeh/ecorche (CC BY-SA 4.0); packaged locally,
  * requires shape registration against existing BodyParts3D skeleton. */
-export const SUPPLEMENTAL_SOURCE='https://raw.githubusercontent.com/Charleeh/ecorche/main/model/ecorche.glb';
+export const SUPPLEMENTAL_SOURCE='/models/supplemental.gltf';
 export const SUPPLEMENTAL_FALLBACK='https://cdn.jsdelivr.net/gh/Charleeh/ecorche@main/model/ecorche.glb';
 export const SUPPLEMENTAL_NAMES=[
   "Left internal oblique",
